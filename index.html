@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skullgirls Mobile · Prize Fight 场次表</title>
+<meta name="description" content="SGM 场次（Prize Fight）轮换表与出战条件：当前开放场次、未来排期、官方限制、数据来源分级。">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" type="application/json" href="data/arenas.json">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="dot"></span>
+      <h1>SGM Prize Fight 场次表</h1>
+    </div>
+    <p class="sub">当前开放的场次、未来排期、官方限制条件与出战参数。数据以 <code>data/arenas.json</code> 为准，页面只是它的视图。</p>
+    <div class="meta" id="meta">
+      <span class="pill" id="m-ver">数据版本 —</span>
+      <span class="pill" id="m-day">游戏日 —</span>
+      <span class="pill" id="m-count">— 条场次</span>
+      <a class="pill link" href="data/arenas.json">arenas.json</a>
+      <a class="pill link" href="data/schedule.json">schedule.json</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="now">
+    <h2>当前开放 <span class="hint" id="now-hint"></span></h2>
+    <div class="cards" id="now-cards"><p class="loading">读取中…</p></div>
+    <p class="note">时间窗按「游戏日」计算：10:00 太平洋时间换日。北京时间约为次日 01:00（夏令时）或 02:00（冬令时）。</p>
+  </section>
+
+  <section id="weeks">
+    <h2>未来排期</h2>
+    <p class="note">角色场与元素场由公式算出（见下方「轮换规则」）；金币 / 星 / 招式场的日期来自官方 wiki 的窗口描述，<b>名字轮换顺序与隔周相位尚未确认</b>。</p>
+    <div class="table-scroll">
+      <table class="grid" id="week-table">
+        <thead>
+          <tr>
+            <th>周</th>
+            <th>角色场 周一–周三</th>
+            <th>角色场 周四–周六</th>
+            <th>元素场 周六–周日</th>
+            <th>金币场 周三起</th>
+            <th>星场 周五–周六</th>
+            <th>招式场</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="catalog">
+    <h2>场次目录</h2>
+    <div class="filters" id="filters"></div>
+    <div class="search">
+      <input id="q" type="search" placeholder="搜场次名 / 角色 / 元素…" autocomplete="off">
+      <span class="count" id="q-count"></span>
+    </div>
+    <div class="table-scroll">
+      <table class="grid catalog" id="cat-table">
+        <thead>
+          <tr>
+            <th>场次</th>
+            <th>类型</th>
+            <th>官方限制</th>
+            <th>本项目条件</th>
+            <th>时间窗</th>
+            <th>等级</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="note">「官方限制」只写官方明文的出战约束；空 = 官方未设限制。<b>本项目条件</b>是本仓库（挂机脚本）用的参数，与官方规则是两回事：元素场官方只给敌方增益，不强制我方元素，脚本按自己的约定让出战队带 1 个对应元素。</p>
+  </section>
+
+  <section id="rotation">
+    <h2>轮换规则</h2>
+    <div class="rule-grid">
+      <div class="rule-card">
+        <h3>角色场：九对循环</h3>
+        <ol class="pairs" id="pairs"></ol>
+        <p class="note">18 个角色两两成对，每对占一周；<b>周一–周三</b> 前者、<b>周四–周六</b> 后者，周日空档。整轮 9 周。</p>
+      </div>
+      <div class="rule-card">
+        <h3>元素场：五行循环</h3>
+        <ol class="elems" id="elems"></ol>
+        <p class="note">每周末开一场，2 天（周六–周日）；元素顺序 5 周一轮。</p>
+      </div>
+      <div class="rule-card">
+        <h3>其余场次</h3>
+        <ul class="plain">
+          <li><b>金币场（Medici）</b>：每周三开，持续 1–2 天；5 个场名 + Shakedown 两变体轮换，顺序未确认。</li>
+          <li><b>星场（Seeing Stars）</b>：每周五–周六。</li>
+          <li><b>招式场（Show Me Your Moves）</b>：周六–周日，隔周开；相位未确认。</li>
+          <li><b>月场</b>：每月 1 日开，整月；hub 上固定占前两张卡。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="formula">
+      <code>周序号 = ⌊(周一 − 2024-06-03) / 7⌋</code>
+      <code>角色对 = 九对[ 周序号 mod 9 ]</code>
+      <code>元素 = [水, 火, 风, 光, 暗][ 周序号 mod 5 ]</code>
+    </div>
+    <p class="note">锚点取自官方论坛日历帖（2024-06-03 那周 = Double/Squigly + Water）。</p>
+    <div id="checked"></div>
+  </section>
+
+  <section id="sources">
+    <h2>数据分级与来源</h2>
+    <div class="levels" id="levels"></div>
+    <p class="note"><b>关于本机记录：</b>仓库里的 hub 扫描 / 场次记录只用于<strong>一般性交叉验证</strong>，不作为权威依据 —— 场次识别链路是最近才开发的，可能误识别，也可能被 hub 上残留的旧卡干扰。</p>
+    <h3>待核实</h3>
+    <ul class="pending" id="pending"></ul>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>数据由 <code>tools/pf_site_export.py</code> 从场次表与轮换规则生成，页面不含手工维护的排期。发现问题请直接改 <code>arenas.json</code> 或提 issue。</p>
+    <p class="tiny">Skullgirls Mobile 及相关名称归 Autumn Games / Hidden Variable 所有。本站为非官方资料站。</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

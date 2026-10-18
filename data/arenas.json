@@ -1,0 +1,1421 @@
+{
+ "schema": 2,
+ "updated_at": "2026-10-18",
+ "game_day": "2026-10-17",
+ "game_version": "8.11",
+ "monthly_slots": 2,
+ "source": "https://zhiyaunhe-ops.github.io/data/arenas.json",
+ "rotation": {
+  "anchor": "2024-06-03",
+  "pair_order": [
+   [
+    "Double",
+    "Squigly"
+   ],
+   [
+    "Valentine",
+    "Fukua"
+   ],
+   [
+    "Eliza",
+    "Marie"
+   ],
+   [
+    "Annie",
+    "Big Band"
+   ],
+   [
+    "Cerebella",
+    "Robo-Fortune"
+   ],
+   [
+    "Ms. Fortune",
+    "Umbrella"
+   ],
+   [
+    "Filia",
+    "Parasoul"
+   ],
+   [
+    "Beowulf",
+    "Peacock"
+   ],
+   [
+    "Painwheel",
+    "Black Dahlia"
+   ]
+  ],
+  "element_order": [
+   "water",
+   "fire",
+   "wind",
+   "light",
+   "dark"
+  ],
+  "character_window": "周一–周三 / 周四–周六（周日空档，各 3 天）",
+  "element_window": "周六–周日（2 天）",
+  "checked_against": [
+   {
+    "day": "2026-09-17",
+    "char": "Marie"
+   },
+   {
+    "day": "2026-09-21",
+    "char": "Annie"
+   },
+   {
+    "day": "2026-09-24",
+    "char": "Big Band"
+   },
+   {
+    "day": "2026-09-28",
+    "char": "Cerebella"
+   },
+   {
+    "day": "2026-10-13",
+    "char": "Filia"
+   }
+  ],
+  "checked_disclaimer": "以上为本项目 hub 扫描的参考性校验（C 级），不构成权威证据；公式本身来自官方论坛日历帖。"
+ },
+ "provenance": {
+  "A": "官方公告 / 官方论坛",
+  "U": "用户口径（本项目内最高，对外仍非官方）",
+  "B": "社区 wiki",
+  "C": "本项目实测（仅参考：识别链路较新，可能误识别或受 hub 残留卡干扰）",
+  "D": "语义推定（仅命名参考，不作约束依据）"
+ },
+ "pending": [
+  {
+   "item": "A SHOT IN THE DARK 是否同时是 10 月元素月场",
+   "why": "10-13 hub 扫描它出现在月场位(#1)且分数 243,751,965，但同一名字也是暗元素周场；分不清是月场卡还是 9 月残留卡",
+   "level": "C"
+  },
+  {
+   "item": "SHOW ME YOUR MOVES 的隔周相位",
+   "why": "已知隔周开、周六–周日，但哪一周开没有可靠记录",
+   "level": "C"
+  },
+  {
+   "item": "HOT MESS / SINK OR SWIM 的有效档期",
+   "why": "官方公告只给了场地名与限制，没给起止日期 ⇒ 本站不把它们算进「当前开放」，需要等下一次官方开放公告或实机确认后再补 from/until",
+   "level": "B"
+  },
+  {
+   "item": "Medici 场的名字轮换顺序",
+   "why": "已知每周三开、5 个场名 + Shakedown 两变体，顺序未确认",
+   "level": "B"
+  }
+ ],
+ "arenas": {
+  "HIGHTIDE": {
+   "name": "HIGH TIDE",
+   "tag": "element",
+   "element": "water",
+   "char": null,
+   "monthly": false,
+   "kind": "元素场·水",
+   "window": {
+    "type": "weekend",
+    "days": 2,
+    "desc": "周六–周日"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制",
+    "modifier": "PERMAFROST"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: SGM Wiki『Prize Fight』元素场表 = High Tide / Water"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": "element:water",
+    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+   }
+  },
+  "RINGOFFIRE": {
+   "name": "RING OF FIRE",
+   "tag": "element",
+   "element": "fire",
+   "char": null,
+   "monthly": false,
+   "kind": "元素场·火",
+   "window": {
+    "type": "weekend",
+    "days": 2,
+    "desc": "周六–周日"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制",
+    "modifier": "FLASH POINT"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: 同上 = Ring of Fire / Fire"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": "element:fire",
+    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+   }
+  },
+  "EYEOFTHESTORM": {
+   "name": "EYE OF THE STORM",
+   "tag": "element",
+   "element": "wind",
+   "char": null,
+   "monthly": false,
+   "kind": "元素场·风",
+   "window": {
+    "type": "weekend",
+    "days": 2,
+    "desc": "周六–周日"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制",
+    "modifier": "GONE WITH THE WIND"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: 同上 = Eye of the Storm / Air(Wind)。与 arena_rules.json 一致"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": "element:wind",
+    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+   }
+  },
+  "ASHININGEXAMPLE": {
+   "name": "A SHINING EXAMPLE",
+   "tag": "element",
+   "element": "light",
+   "char": null,
+   "monthly": false,
+   "kind": "元素场·光",
+   "window": {
+    "type": "weekend",
+    "days": 2,
+    "desc": "周六–周日"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制",
+    "modifier": "EMISSION SPECTRUM"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: 同上 = A Shining Example / Light"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": "element:light",
+    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+   }
+  },
+  "TWOTOTANGLE": {
+   "name": "TWO TO TANGLE",
+   "tag": "character",
+   "element": null,
+   "char": "Filia",
+   "monthly": false,
+   "kind": "角色场(Filia)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: SGM Wiki 角色场清单 = Two to Tangle (Filia)"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Filia",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "DAMEOFTHRONES": {
+   "name": "DAME OF THRONES",
+   "tag": "character",
+   "element": null,
+   "char": "Parasoul",
+   "monthly": false,
+   "kind": "角色场(Parasoul)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Dame of Thrones (Parasoul)。⚠️ Parasoul 不在 pf_bot.CHARACTER_CHIPS(仅 12 角色), 该场 class 约束会静默跳过"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Parasoul",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "RUMBLEPACK": {
+   "name": "RUMBLE PACK",
+   "tag": "character",
+   "element": null,
+   "char": "Beowulf",
+   "monthly": false,
+   "kind": "角色场(Beowulf)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Rumble Pack (Beowulf)"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Beowulf",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "CUTTINGROOMFLOOR": {
+   "name": "CUTTING ROOM FLOOR",
+   "tag": "character",
+   "element": null,
+   "char": "Peacock",
+   "monthly": false,
+   "kind": "角色场(Peacock)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Cutting Room Floor (Peacock)。⚠️ Peacock 不在 CHARACTER_CHIPS"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Peacock",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "NOPAINNOGAIN": {
+   "name": "NO PAIN NO GAIN",
+   "tag": "character",
+   "element": null,
+   "char": "Painwheel",
+   "monthly": false,
+   "kind": "角色场(Painwheel)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = No Pain No Gain (Painwheel)"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Painwheel",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "FRAGSTORICHES": {
+   "name": "FRAGS TO RICHES",
+   "tag": "character",
+   "element": null,
+   "char": "Black Dahlia",
+   "monthly": false,
+   "kind": "角色场(Black Dahlia)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Frags to Riches (Black Dahlia)"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Black Dahlia",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "SECONDTONUN": {
+   "name": "SECOND TO NUN",
+   "tag": "character",
+   "element": null,
+   "char": "Double",
+   "monthly": false,
+   "kind": "角色场(Double)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Second to Nun (Double)"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Double",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "NIGHTSGHOUL": {
+   "name": "NIGHT'S GHOUL",
+   "tag": "character",
+   "element": null,
+   "char": "Squigly",
+   "monthly": false,
+   "kind": "角色场(Squigly)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Night's Ghoul (Squigly)。arena_rules.json 标为『未知』, 本表按社区清单定。⚠️ Squigly 不在 CHARACTER_CHIPS"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Squigly",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "CASKETMATCH": {
+   "name": "CASKET MATCH",
+   "tag": "character",
+   "element": null,
+   "char": "Valentine",
+   "monthly": false,
+   "kind": "角色场(Valentine)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Casket Match (Valentine)。⚠️ Valentine 不在 CHARACTER_CHIPS"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Valentine",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "ALEAGUEOFHERCLONE": {
+   "name": "A LEAGUE OF HER CLONE",
+   "tag": "character",
+   "element": null,
+   "char": "Fukua",
+   "monthly": false,
+   "kind": "角色场(Fukua)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = A League of Her Clone (Fukua)"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Fukua",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "BLOODSPORT": {
+   "name": "BLOOD SPORT",
+   "tag": "character",
+   "element": null,
+   "char": "Eliza",
+   "monthly": false,
+   "kind": "角色场(Eliza)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Blood Sport (Eliza)。与 arena_rules.json(角色周场 艳后 Eliza) 一致"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Eliza",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "INFINITYANDBEYOND": {
+   "name": "INFINITY AND BEYOND",
+   "tag": "character",
+   "element": null,
+   "char": "Annie",
+   "monthly": false,
+   "kind": "角色场(Annie)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Infinity and Beyond (Annie)。与 arena_rules.json 一致"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Annie",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "BIGBENSBEATDOWN": {
+   "name": "BIG BEN'S BEATDOWN",
+   "tag": "character",
+   "element": null,
+   "char": "Big Band",
+   "monthly": false,
+   "kind": "角色场(Big Band)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Big Ben's Beatdown (Big Band)。arena_rules.json 一致; OCR 实测丢首字母 B (2026-09-25)"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Big Band",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "HIGHWIREHIJINKS": {
+   "name": "HIGH WIRE HIJINKS",
+   "tag": "character",
+   "element": null,
+   "char": "Cerebella",
+   "monthly": false,
+   "kind": "角色场(Cerebella)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = High Wire Hijinks (Cerebella)。与 arena_rules.json 一致"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Cerebella",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "ONESANDZEROS": {
+   "name": "ONES AND ZEROS",
+   "tag": "character",
+   "element": null,
+   "char": "Robo-Fortune",
+   "monthly": false,
+   "kind": "角色场(Robo-Fortune)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Ones and Zeros (Robo-Fortune)。存疑点: 本仓 pf_nav.KNOWN_TITLES 与历史 sessions 记的是 RUNESANDZEROS(OCR 丢首字母 R 得 UNESANDZEROS), 与社区名差一个 R; 两种写法都挂上, 待人工确认卡面真名。⚠️ Robo-Fortune 不在 CHARACTER_CHIPS"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Robo-Fortune",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "AHEADOFTHEGAME": {
+   "name": "A HEAD OF THE GAME",
+   "tag": "character",
+   "element": null,
+   "char": "Ms. Fortune",
+   "monthly": false,
+   "kind": "角色场(Ms. Fortune)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = A Head of the Game (Ms. Fortune)"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Ms. Fortune",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "CLOUDYWITHACHANCEOFPAIN": {
+   "name": "CLOUDY WITH A CHANCE OF PAIN",
+   "tag": "character",
+   "element": null,
+   "char": "Umbrella",
+   "monthly": false,
+   "kind": "角色场(Umbrella)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Cloudy with a Chance of Pain (Umbrella)。OCR 实测被截成 CHANCEOFPAIN(2026-10-09 场次名), 子串即命中。⚠️ Umbrella 不在 CHARACTER_CHIPS"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Umbrella",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "DEATHMETTLE": {
+   "name": "DEATH METTLE",
+   "tag": "character",
+   "element": null,
+   "char": "Marie",
+   "monthly": false,
+   "kind": "角色场(Marie)",
+   "window": {
+    "type": "weekly-slot",
+    "days": 3,
+    "desc": "半周：周一–周三 或 周四–周六（周日空档）"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: = Death Mettle (Marie)。与 arena_rules.json(角色周场 Marie) 一致"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 5,
+    "score_target": 50000000,
+    "rule": "class:Marie",
+    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+   }
+  },
+  "MEDICISHAKEDOWN": {
+   "name": "MEDICI SHAKEDOWN",
+   "tag": "gold",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "金币场",
+   "window": {
+    "type": "weekly",
+    "days": 2,
+    "desc": "周三开，持续 1–2 天"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: SGM Wiki 金币场清单含 Medici Shakedown。与 arena_rules.json 一致"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 4,
+    "score_target": 40000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "MEDICIHEIST": {
+   "name": "MEDICI HEIST",
+   "tag": "gold",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "金币场",
+   "window": {
+    "type": "weekly",
+    "days": 2,
+    "desc": "周三开，持续 1–2 天"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: 同上, Medici Heist"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 4,
+    "score_target": 40000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "MEDICIFIGHTCLUB": {
+   "name": "MEDICI FIGHT CLUB",
+   "tag": "gold",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "金币场",
+   "window": {
+    "type": "weekly",
+    "days": 2,
+    "desc": "周三开，持续 1–2 天"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: 同上, Medici Fight Club"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 4,
+    "score_target": 40000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "MEDICICRIMESPREE": {
+   "name": "MEDICI CRIME SPREE",
+   "tag": "gold",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "金币场",
+   "window": {
+    "type": "weekly",
+    "days": 2,
+    "desc": "周三开，持续 1–2 天"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: 同上, Medici Crime Spree"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 4,
+    "score_target": 40000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "MEDICIPITFIGHTING": {
+   "name": "MEDICI PIT FIGHTING",
+   "tag": "gold",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "金币场",
+   "window": {
+    "type": "weekly",
+    "days": 2,
+    "desc": "周三开，持续 1–2 天"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: 同上, Medici Pit Fighting"
+   ],
+   "conf": "B",
+   "project": {
+    "energy": 4,
+    "score_target": 40000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "SHOWMEYOURMOVES": {
+   "name": "SHOW ME YOUR MOVES",
+   "tag": "move",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "招式场",
+   "window": {
+    "type": "biweekly",
+    "days": 2,
+    "desc": "周六–周日，隔周开"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方: SGM 5.2 更新公告『SHOW ME YOUR MOVES』重做段 + 社区清单 (Move Relics); 对应 sgmnow 的 SMYM PF(招式)。仅周六日、隔周开。⚠️ 实测 OCR 会把卡面读成 SHOWOMETOUR / SHOWOMETOURN (2026-10-10/10-12), 但**不确认**是否即本场, 故未挂 match 别名 —— 让它落 unknown 留痕, 人工核对后再补。"
+   ],
+   "conf": "A",
+   "project": {
+    "energy": 4,
+    "score_target": 40000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "SHOWOMETOUR": {
+   "name": "SHOWOMETOUR",
+   "tag": "misc",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "其他场",
+   "window": {
+    "type": "unknown",
+    "days": 0,
+    "desc": "未确认"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "用户 2026-10-12 口径「SHOWOMETOUR 算其他, 也是 5kw/4」。≠ SHOW ME YOUR MOVES (那是 move = 4kw/4, 条件不同); ≠ 月场 (月场无上限 None, 且它实测在 #3, 而月场恒占 #1/#2 —— 见文件头「月场固定占 #1/#2」)。OCR 变体 SHOWOMETOURN 同录 (10-10 实测)。"
+   ],
+   "conf": "U",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "SEEINGSTARS": {
+   "name": "SEEING STARS",
+   "tag": "assist",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "星助手场",
+   "window": {
+    "type": "weekly",
+    "days": 2,
+    "desc": "周五–周六"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "官方/社区: Seeing Stars PF(星); sgmnow 有该行但 name 恒为占位符 'Active'(已被 _is_placeholder 剔出索引), 只能按卡名认。SGM 7.0 更新公告「NEW PRIZE FIGHT - Seeing Stars」可印证"
+   ],
+   "conf": "A",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "HOTMESS": {
+   "name": "HOT MESS",
+   "tag": "monthly_element",
+   "element": "fire",
+   "char": null,
+   "monthly": true,
+   "kind": "月场·元素·火",
+   "window": {
+    "type": "monthly",
+    "days": 30,
+    "desc": "每月 1 日开，整月"
+   },
+   "official": {
+    "restriction": "火元素（出战队与防守队各需至少 1 名火元素斗士）",
+    "applies_to": "both",
+    "note": "官方明文限制（见 src / note）"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "(有效期未知): A 官方 8.7 更新公告「New Monthly Prize Fight: Hot Mess! ... requires a Fire Element fighter on both Attack and Defense」—— 月长场 + 火元素硬性要求。⚠️ 未填 valid_from/valid_until(公告未给具体档期), 等于长期有效; 请补上档期以免下月误挂。"
+   ],
+   "conf": "A",
+   "note": "官方 8.7 更新公告：requires a Fire Element fighter on both Attack and Defense",
+   "project": {
+    "energy": 4,
+    "score_target": null,
+    "rule": "element:fire",
+    "note": null
+   }
+  },
+  "SINKORSWIM": {
+   "name": "SINK OR SWIM",
+   "tag": "element",
+   "element": "water",
+   "char": null,
+   "monthly": false,
+   "kind": "元素场·水",
+   "window": {
+    "type": "weekend",
+    "days": 2,
+    "desc": "周六–周日"
+   },
+   "official": {
+    "restriction": "无明文限制",
+    "applies_to": null,
+    "note": "官方明文限制（见 src / note）",
+    "modifier": "PERMAFROST"
+   },
+   "src": [
+    "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
+    "(有效期未知): A 官方 8.8 更新公告「Seasonal Prize Fight: Sink or Swim ... put their Water fighters to the test」。季节性场, 公告未给档期。"
+   ],
+   "conf": "A",
+   "note": "官方 8.8 公告只说「考验水元素斗士」，未写明强制出战队限制",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": "element:water",
+    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+   }
+  },
+  "ACLASSOFONESOWN": {
+   "name": "A CLASS OF ONE'S OWN",
+   "tag": "monthly_character",
+   "element": null,
+   "char": null,
+   "monthly": true,
+   "kind": "月场·角色",
+   "window": {
+    "type": "monthly",
+    "days": 30,
+    "desc": "每月 1 日开，整月"
+   },
+   "from": "2026-09-01",
+   "until": "2026-10-01",
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "用户2026-09-16 确认 = 角色月场; 202609角色月场场次(rule=null, tgt=None, 实测 188,331,229) 已实证。10-01 起 sgmnow 的 Monthly PF 换成 Costume Party, 本条过期",
+    "tools/data/monthly_manual.json"
+   ],
+   "conf": "U",
+   "project": {
+    "energy": 4,
+    "score_target": null,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "AGAINSTTHEWIND": {
+   "name": "AGAINST THE WIND",
+   "tag": "monthly_element",
+   "element": "wind",
+   "char": null,
+   "monthly": true,
+   "kind": "月场·元素·风",
+   "window": {
+    "type": "monthly",
+    "days": 30,
+    "desc": "每月 1 日开，整月"
+   },
+   "from": "2026-09-01",
+   "until": "2026-10-01",
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "用户 2026-09-16 确认 = 元素月场且本月 wind; 202609元素月场场次 rule=element:wind (2026-09-06 建的与 10-02 建的都实测过)",
+    "tools/data/monthly_manual.json"
+   ],
+   "conf": "U",
+   "project": {
+    "energy": 4,
+    "score_target": null,
+    "rule": "element:wind",
+    "note": null
+   }
+  },
+  "COSTUMEPARTY": {
+   "name": "COSTUME PARTY",
+   "tag": "monthly_element",
+   "element": "dark",
+   "char": null,
+   "monthly": true,
+   "kind": "月场·元素·暗",
+   "window": {
+    "type": "monthly",
+    "days": 30,
+    "desc": "每月 1 日开，整月"
+   },
+   "from": "2026-10-01",
+   "until": "2026-11-01",
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "用户 2026-10-06 口径「元素月场这个月是暗」。⚠️ sgmnow 只给名字 'Costume Party', **不给类别也不给元素** —— 类别(元素月场)与元素(dark) 两项都靠用户口述。独立佐证: sessions.json 的「202609元素月场 09-06 10-02」已被手工从 rule=wind 改成 rule=dark(2026-10-02 建), 与本条一致",
+    "tools/data/monthly_manual.json"
+   ],
+   "conf": "U",
+   "project": {
+    "energy": 4,
+    "score_target": null,
+    "rule": "element:dark",
+    "note": null
+   }
+  },
+  "202609元素月场": {
+   "name": "202609元素月场",
+   "tag": "monthly_element",
+   "element": "wind",
+   "char": null,
+   "monthly": true,
+   "kind": "月场·元素·风",
+   "window": {
+    "type": "monthly",
+    "days": 30,
+    "desc": "每月 1 日开，整月"
+   },
+   "from": "2026-09-01",
+   "until": "2026-10-01",
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "sessions.json 迁移实测(2026-10-06): 上面 AGAINST THE WIND 登记的是 sgmnow 官方名, 而本地场次是自起名「202609元素月场」, 按官方名匹配不上-> 落element 兜底, 标签粒度丢失(条件仍正确)。元素值 wind 取自同月官方条 (用户 2026-09-16 确认)。⚠️ 10-02 有人把「09-06 10-02」那条手工改成 dark, 2026-10-06 用户裁定: **9 月的场次按 9 月官方名 wind**, 那次 dark 是把本月(10月)的暗场加错了地方",
+    "tools/data/monthly_manual.json"
+   ],
+   "conf": "U",
+   "project": {
+    "energy": 4,
+    "score_target": null,
+    "rule": "element:wind",
+    "note": null
+   }
+  },
+  "TRIALBYFIRE": {
+   "name": "TRIAL BY FIRE",
+   "tag": "element",
+   "element": "fire",
+   "char": null,
+   "monthly": false,
+   "kind": "元素·火",
+   "window": {
+    "type": "weekend",
+    "days": 2,
+    "desc": "周六–周日"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制",
+    "modifier": "FLASH POINT"
+   },
+   "src": [
+    "tools/data/arena_rules.json",
+    "场地名直述, 无本仓库实测"
+   ],
+   "conf": "C",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": "element:fire",
+    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+   }
+  },
+  "THEBIGTHAW": {
+   "name": "THE BIG THAW",
+   "tag": "element",
+   "element": "water",
+   "char": null,
+   "monthly": false,
+   "kind": "元素·水",
+   "window": {
+    "type": "weekend",
+    "days": 2,
+    "desc": "周六–周日"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制",
+    "modifier": "PERMAFROST"
+   },
+   "src": [
+    "tools/data/arena_rules.json",
+    "thaw->水 属语义推定"
+   ],
+   "conf": "D",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": "element:water",
+    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+   }
+  },
+  "SHAKEDOWNJINX": {
+   "name": "SHAKEDOWN - JINX",
+   "tag": "misc",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "金币·Jinx",
+   "window": {
+    "type": "unknown",
+    "days": 0,
+    "desc": "未确认"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "tools/data/arena_rules.json",
+    "2026-09-17 01:05 自动化实测命中: 游戏日 09-16 fetch 得 Current Medici PF = Shakedown - Jinx (active, 与 09-15 diff 确认源表已刷新), PF_BOT.md §6.12.8 已升 A。注意口径: hub 卡面 OCR 是 'MEDICI SHAKEDOWN' (命中 MEDICI SHAKEDOWN 条目), 'Shakedown - Jinx' 是数据源里的变体名; 本条保留是为防某天卡面直接写变体名, 下一个验点 09-23 周三应为 Hemofilia"
+   ],
+   "conf": "C",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "SHAKEDOWNHEMOFILIA": {
+   "name": "SHAKEDOWN - HEMOFILIA",
+   "tag": "misc",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "金币·Hemofilia",
+   "window": {
+    "type": "unknown",
+    "days": 0,
+    "desc": "未确认"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "tools/data/arena_rules.json",
+    "同表 (09-09 / 09-23), now 页 Last Medici PF 亦为 Shakedown - Hemofilia; 实测佐证: 09-15 快照 medi.name = 'Shakedown - Hemofilia' (title=Last Medici PF)。待 2026-09-23 周三 fetch 命中后升 A"
+   ],
+   "conf": "C",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "GOLDRUSH": {
+   "name": "GOLD RUSH",
+   "tag": "misc",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "金币",
+   "window": {
+    "type": "unknown",
+    "days": 0,
+    "desc": "未确认"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "tools/data/arena_rules.json",
+    "名称看是金币类, 未实测"
+   ],
+   "conf": "C",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "BELLEOFTHEBRAWL": {
+   "name": "BELLE OF THE BRAWL",
+   "tag": "misc",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "角色周场?",
+   "window": {
+    "type": "unknown",
+    "days": 0,
+    "desc": "未确认"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "tools/data/arena_rules.json",
+    "仅语感"
+   ],
+   "conf": "D",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "ROSHAMBOH": {
+   "name": "ROSHAMBOH",
+   "tag": "misc",
+   "element": null,
+   "char": null,
+   "monthly": false,
+   "kind": "未知",
+   "window": {
+    "type": "unknown",
+    "days": 0,
+    "desc": "未确认"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制"
+   },
+   "src": [
+    "tools/data/arena_rules.json",
+    "无依据"
+   ],
+   "conf": "D",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "ASHOTINTHEDARK": {
+   "name": "A SHOT IN THE DARK",
+   "tag": "element",
+   "element": "dark",
+   "char": null,
+   "monthly": false,
+   "kind": "元素周场·暗",
+   "window": {
+    "type": "weekend",
+    "days": 2,
+    "desc": "周六–周日"
+   },
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "官方未设出战角色/元素限制",
+    "modifier": "NYCTOPHOBIA"
+   },
+   "src": [
+    "tools/data/arena_rules.json",
+    "用户 2026-09-20 明确「这是暗场, 按元素通用规定左1放一个暗」(用户口径=本项目最高依据); 独立佐证: 游戏日 09-19(周六) 快照 Current Elemental PF 由 Light(未开) → Dark(开放), 与 §6.12.1「元素 PF = 周六, 35 天」A 级周期吻合。2026-09-20 hub 扫到该卡 score=0 = 当日新开。⚠️ OCR 会丢空格读成 ASHOTINTHEDARK / ASHOTNTHEDARK, 匹配走字母归一, 两边都命中。parent_id 是当天自动新建的顶级场次(名字待人工校正), 复用它是为了避免下次再新建一个。"
+   ],
+   "conf": "U",
+   "note": "同一名字既是暗元素周场，又可能占 10 月月场位（见 pending 第 1 条）",
+   "project": {
+    "energy": 4,
+    "score_target": 50000000,
+    "rule": "element:dark",
+    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+   }
+  }
+ }
+}
