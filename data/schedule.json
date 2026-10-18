@@ -43,9 +43,15 @@
    },
    "monthly": [
     {
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark",
      "tag": "monthly_element",
+     "until": "2026-11-01"
+    },
+    {
+     "name": "COSTUME PARTY",
+     "element": null,
+     "tag": "monthly_character",
      "until": "2026-11-01"
     }
    ]
@@ -92,9 +98,15 @@
    },
    "monthly": [
     {
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark",
      "tag": "monthly_element",
+     "until": "2026-11-01"
+    },
+    {
+     "name": "COSTUME PARTY",
+     "element": null,
+     "tag": "monthly_character",
      "until": "2026-11-01"
     }
    ]
@@ -141,9 +153,15 @@
    },
    "monthly": [
     {
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark",
      "tag": "monthly_element",
+     "until": "2026-11-01"
+    },
+    {
+     "name": "COSTUME PARTY",
+     "element": null,
+     "tag": "monthly_character",
      "until": "2026-11-01"
     }
    ]
@@ -190,9 +208,15 @@
    },
    "monthly": [
     {
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark",
      "tag": "monthly_element",
+     "until": "2026-11-01"
+    },
+    {
+     "name": "COSTUME PARTY",
+     "element": null,
+     "tag": "monthly_character",
      "until": "2026-11-01"
     }
    ]
@@ -239,9 +263,15 @@
    },
    "monthly": [
     {
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark",
      "tag": "monthly_element",
+     "until": "2026-11-01"
+    },
+    {
+     "name": "COSTUME PARTY",
+     "element": null,
+     "tag": "monthly_character",
      "until": "2026-11-01"
     }
    ]
@@ -288,9 +318,15 @@
    },
    "monthly": [
     {
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark",
      "tag": "monthly_element",
+     "until": "2026-11-01"
+    },
+    {
+     "name": "COSTUME PARTY",
+     "element": null,
+     "tag": "monthly_character",
      "until": "2026-11-01"
     }
    ]
@@ -337,9 +373,15 @@
    },
    "monthly": [
     {
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark",
      "tag": "monthly_element",
+     "until": "2026-11-01"
+    },
+    {
+     "name": "COSTUME PARTY",
+     "element": null,
+     "tag": "monthly_character",
      "until": "2026-11-01"
     }
    ]
@@ -386,9 +428,15 @@
    },
    "monthly": [
     {
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark",
      "tag": "monthly_element",
+     "until": "2026-11-01"
+    },
+    {
+     "name": "COSTUME PARTY",
+     "element": null,
+     "tag": "monthly_character",
      "until": "2026-11-01"
     }
    ]
@@ -406,8 +454,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -422,8 +475,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -442,8 +500,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -462,8 +525,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -482,8 +550,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -506,14 +579,14 @@
      "name": "SEEING STARS"
     },
     {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
+     "type": "monthly_element",
+     "name": "FALL OF THE DARK",
+     "element": "dark"
     },
     {
-     "type": "monthly_element",
+     "type": "monthly_character",
      "name": "COSTUME PARTY",
-     "element": "dark"
+     "element": null
     }
    ]
   },
@@ -527,14 +600,14 @@
      "name": "A SHINING EXAMPLE"
     },
     {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
+     "type": "monthly_element",
+     "name": "FALL OF THE DARK",
+     "element": "dark"
     },
     {
-     "type": "monthly_element",
+     "type": "monthly_character",
      "name": "COSTUME PARTY",
-     "element": "dark"
+     "element": null
     }
    ]
   },
@@ -549,8 +622,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -565,8 +643,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -585,8 +668,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -605,8 +693,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -625,8 +718,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -649,14 +747,14 @@
      "name": "SEEING STARS"
     },
     {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
+     "type": "monthly_element",
+     "name": "FALL OF THE DARK",
+     "element": "dark"
     },
     {
-     "type": "monthly_element",
+     "type": "monthly_character",
      "name": "COSTUME PARTY",
-     "element": "dark"
+     "element": null
     }
    ]
   },
@@ -670,14 +768,14 @@
      "name": "A SHOT IN THE DARK"
     },
     {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
+     "type": "monthly_element",
+     "name": "FALL OF THE DARK",
+     "element": "dark"
     },
     {
-     "type": "monthly_element",
+     "type": "monthly_character",
      "name": "COSTUME PARTY",
-     "element": "dark"
+     "element": null
     }
    ]
   },
@@ -692,8 +790,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -708,8 +811,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -728,8 +836,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -748,8 +861,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -768,8 +886,13 @@
     },
     {
      "type": "monthly_element",
-     "name": "COSTUME PARTY",
+     "name": "FALL OF THE DARK",
      "element": "dark"
+    },
+    {
+     "type": "monthly_character",
+     "name": "COSTUME PARTY",
+     "element": null
     }
    ]
   },
@@ -792,14 +915,14 @@
      "name": "SEEING STARS"
     },
     {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
+     "type": "monthly_element",
+     "name": "FALL OF THE DARK",
+     "element": "dark"
     },
     {
-     "type": "monthly_element",
+     "type": "monthly_character",
      "name": "COSTUME PARTY",
-     "element": "dark"
+     "element": null
     }
    ]
   },
@@ -811,11 +934,6 @@
      "type": "element",
      "element": "water",
      "name": "HIGH TIDE"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
     }
    ]
   },
@@ -903,11 +1021,6 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
     }
    ]
   },
@@ -919,11 +1032,6 @@
      "type": "element",
      "element": "fire",
      "name": "RING OF FIRE"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
     }
    ]
   },
@@ -1011,11 +1119,6 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
     }
    ]
   },
@@ -1027,11 +1130,6 @@
      "type": "element",
      "element": "wind",
      "name": "EYE OF THE STORM"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
     }
    ]
   },
@@ -1119,11 +1217,6 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
     }
    ]
   },
@@ -1135,11 +1228,6 @@
      "type": "element",
      "element": "light",
      "name": "A SHINING EXAMPLE"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
     }
    ]
   },
@@ -1227,11 +1315,6 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
     }
    ]
   },
@@ -1243,11 +1326,6 @@
      "type": "element",
      "element": "dark",
      "name": "A SHOT IN THE DARK"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
     }
    ]
   },
@@ -1335,11 +1413,6 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
     }
    ]
   },
@@ -1351,11 +1424,6 @@
      "type": "element",
      "element": "water",
      "name": "HIGH TIDE"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "unverified": true
     }
    ]
   }

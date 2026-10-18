@@ -139,9 +139,8 @@
       if (wd >= 5) open.push({ type: 'element', element: elem, name: elemArena(elem) });
       if (wd === 2 || wd === 3) open.push({ type: 'gold', name: null });
       if (wd === 4 || wd === 5) open.push({ type: 'assist', name: 'SEEING STARS' });
-      /* 招式场：官方写「周六–周日、隔周」。窗口确定、相位不定 ⇒ 标窗口但显式标未核实，
-       * 别让读者以为今天一定有。 */
-      if (wd >= 5) open.push({ type: 'move', name: 'SHOW ME YOUR MOVES', unverified: true });
+      /* 招式场：官方只写「隔周、周六–周日」，**哪一周开没确认** ⇒ 不进逐日表。
+       * 排进去等于断言「今天开」，2026-10-18 实测今天没有 ⇒ 宁可空着（在轮换规则里说明）。 */
       monthlies.filter(m => m.from <= iso && iso < m.until)
         .forEach(m => open.push({ type: m.tag, name: m.name, element: m.element, until: m.until }));
       out.push({ date: iso, weekday: wdName[wd], open });
@@ -215,7 +214,7 @@
       if (d.date === data.game_day) tr.className = 'today';
       tr.append(el('td', 'wk', `${fmtDay(d.date)} 周${d.weekday}`));
 
-      const bucket = { character: [], element: [], gold: [], assist: [], move: [], monthly: [] };
+      const bucket = { character: [], element: [], gold: [], assist: [], monthly: [] };
       d.open.forEach(o => {
         const k = o.type.indexOf('monthly') === 0 ? 'monthly' : o.type;
         (bucket[k] || (bucket[k] = [])).push(o);
@@ -232,7 +231,6 @@
       put('element', o => `${ELEM_ZH[o.element] || o.element} · ${o.name || '—'}`);
       put('gold', () => 'Medici（场名轮换）');
       put('assist', () => 'Seeing Stars');
-      put('move', () => '隔周场（相位未确认）');
       put('monthly', o => o.name);
       tb.append(tr);
     });

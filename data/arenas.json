@@ -87,9 +87,14 @@
  },
  "pending": [
   {
-   "item": "A SHOT IN THE DARK 是否同时是 10 月元素月场",
-   "why": "10-13 hub 扫描它出现在月场位(#1)且分数 243,751,965，但同一名字也是暗元素周场；分不清是月场卡还是 9 月残留卡",
-   "level": "C"
+   "item": "COSTUME PARTY 要求防守队伍是哪个角色",
+   "why": "官方 8.11 公告只点名了 FALL OF THE DARK（暗元素）；COSTUME PARTY 的防守角色名公告未给，站内先留空不猜",
+   "level": "B"
+  },
+  {
+   "item": "FALL OF THE DARK 的起止日期",
+   "why": "官方原文只写 launches，没给日期；站内按「月场整月」填 10-01~11-01，月末需核对",
+   "level": "B"
   },
   {
    "item": "SHOW ME YOUR MOVES 的隔周相位",
@@ -121,9 +126,9 @@
     "desc": "周六–周日"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制",
+    "restriction": "出战队需为水元素",
+    "applies_to": "attack",
+    "note": "官方规则：元素场限制出战队元素",
     "modifier": "PERMAFROST"
    },
    "src": [
@@ -135,7 +140,7 @@
     "energy": 4,
     "score_target": 50000000,
     "rule": "element:water",
-    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+    "note": "出战队需带对应元素（官方规则）"
    }
   },
   "RINGOFFIRE": {
@@ -151,9 +156,9 @@
     "desc": "周六–周日"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制",
+    "restriction": "出战队需为火元素",
+    "applies_to": "attack",
+    "note": "官方规则：元素场限制出战队元素",
     "modifier": "FLASH POINT"
    },
    "src": [
@@ -165,7 +170,7 @@
     "energy": 4,
     "score_target": 50000000,
     "rule": "element:fire",
-    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+    "note": "出战队需带对应元素（官方规则）"
    }
   },
   "EYEOFTHESTORM": {
@@ -181,9 +186,9 @@
     "desc": "周六–周日"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制",
+    "restriction": "出战队需为风元素",
+    "applies_to": "attack",
+    "note": "官方规则：元素场限制出战队元素",
     "modifier": "GONE WITH THE WIND"
    },
    "src": [
@@ -195,7 +200,7 @@
     "energy": 4,
     "score_target": 50000000,
     "rule": "element:wind",
-    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+    "note": "出战队需带对应元素（官方规则）"
    }
   },
   "ASHININGEXAMPLE": {
@@ -211,9 +216,9 @@
     "desc": "周六–周日"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制",
+    "restriction": "出战队需为光元素",
+    "applies_to": "attack",
+    "note": "官方规则：元素场限制出战队元素",
     "modifier": "EMISSION SPECTRUM"
    },
    "src": [
@@ -225,7 +230,7 @@
     "energy": 4,
     "score_target": 50000000,
     "rule": "element:light",
-    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+    "note": "出战队需带对应元素（官方规则）"
    }
   },
   "TWOTOTANGLE": {
@@ -241,9 +246,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Filia",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -254,7 +259,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Filia",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "DAMEOFTHRONES": {
@@ -270,9 +275,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Parasoul",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -283,7 +288,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Parasoul",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "RUMBLEPACK": {
@@ -299,9 +304,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Beowulf",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -312,7 +317,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Beowulf",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "CUTTINGROOMFLOOR": {
@@ -328,9 +333,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Peacock",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -341,7 +346,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Peacock",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "NOPAINNOGAIN": {
@@ -357,9 +362,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Painwheel",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -370,7 +375,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Painwheel",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "FRAGSTORICHES": {
@@ -386,9 +391,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Black Dahlia",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -399,7 +404,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Black Dahlia",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "SECONDTONUN": {
@@ -415,9 +420,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Double",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -428,7 +433,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Double",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "NIGHTSGHOUL": {
@@ -444,9 +449,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Squigly",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -457,7 +462,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Squigly",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "CASKETMATCH": {
@@ -473,9 +478,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Valentine",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -486,7 +491,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Valentine",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "ALEAGUEOFHERCLONE": {
@@ -502,9 +507,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Fukua",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -515,7 +520,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Fukua",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "BLOODSPORT": {
@@ -531,9 +536,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Eliza",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -544,7 +549,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Eliza",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "INFINITYANDBEYOND": {
@@ -560,9 +565,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Annie",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -573,7 +578,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Annie",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "BIGBENSBEATDOWN": {
@@ -589,9 +594,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Big Band",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -602,7 +607,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Big Band",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "HIGHWIREHIJINKS": {
@@ -618,9 +623,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Cerebella",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -631,7 +636,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Cerebella",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "ONESANDZEROS": {
@@ -647,9 +652,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Robo-Fortune",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -660,7 +665,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Robo-Fortune",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "AHEADOFTHEGAME": {
@@ -676,9 +681,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Ms. Fortune",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -689,7 +694,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Ms. Fortune",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "CLOUDYWITHACHANCEOFPAIN": {
@@ -705,9 +710,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Umbrella",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -718,7 +723,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Umbrella",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "DEATHMETTLE": {
@@ -734,9 +739,9 @@
     "desc": "半周：周一–周三 或 周四–周六（周日空档）"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为 Marie",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "SGM Wiki『Prize Fight』(2026-10-18 抓取)",
@@ -747,7 +752,7 @@
     "energy": 5,
     "score_target": 50000000,
     "rule": "class:Marie",
-    "note": "character 的 class 只约束防守队；元素场按项目约定出战队带 1 个对应元素"
+    "note": "class 只约束防守队伍（官方规则）"
    }
   },
   "MEDICISHAKEDOWN": {
@@ -1017,7 +1022,7 @@
     "energy": 4,
     "score_target": null,
     "rule": "element:fire",
-    "note": null
+    "note": "出战队需带对应元素（官方规则）"
    }
   },
   "SINKORSWIM": {
@@ -1048,7 +1053,7 @@
     "energy": 4,
     "score_target": 50000000,
     "rule": "element:water",
-    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+    "note": "出战队需带对应元素（官方规则）"
    }
   },
   "ACLASSOFONESOWN": {
@@ -1066,9 +1071,9 @@
    "from": "2026-09-01",
    "until": "2026-10-01",
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "防守队伍需为对应角色（角色待确认）",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
    },
    "src": [
     "用户2026-09-16 确认 = 角色月场; 202609角色月场场次(rule=null, tgt=None, 实测 188,331,229) 已实证。10-01 起 sgmnow 的 Monthly PF 换成 Costume Party, 本条过期",
@@ -1079,7 +1084,7 @@
     "energy": 4,
     "score_target": null,
     "rule": null,
-    "note": null,
+    "note": "class 只约束防守队伍（官方规则）",
     "rule_reason": "该类场无出战限制"
    }
   },
@@ -1098,9 +1103,9 @@
    "from": "2026-09-01",
    "until": "2026-10-01",
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "出战队需为风元素",
+    "applies_to": "attack",
+    "note": "官方规则：元素场限制出战队元素"
    },
    "src": [
     "用户 2026-09-16 确认 = 元素月场且本月 wind; 202609元素月场场次 rule=element:wind (2026-09-06 建的与 10-02 建的都实测过)",
@@ -1111,11 +1116,11 @@
     "energy": 4,
     "score_target": null,
     "rule": "element:wind",
-    "note": null
+    "note": "出战队需带对应元素（官方规则）"
    }
   },
-  "COSTUMEPARTY": {
-   "name": "COSTUME PARTY",
+  "FALLOFTHEDARK": {
+   "name": "FALL OF THE DARK",
    "tag": "monthly_element",
    "element": "dark",
    "char": null,
@@ -1129,12 +1134,12 @@
    "from": "2026-10-01",
    "until": "2026-11-01",
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "出战队需为暗元素",
+    "applies_to": "attack",
+    "note": "官方规则：元素场限制出战队元素"
    },
    "src": [
-    "用户 2026-10-06 口径「元素月场这个月是暗」。⚠️ sgmnow 只给名字 'Costume Party', **不给类别也不给元素** —— 类别(元素月场)与元素(dark) 两项都靠用户口述。独立佐证: sessions.json 的「202609元素月场 09-06 10-02」已被手工从 rule=wind 改成 rule=dark(2026-10-02 建), 与本条一致",
+    "官方 8.11 补丁说明 (2026-09-29)「Seasonal Fight: Fall of the Dark ... challenges you to build around your Dark Fighters, with elemental modifiers」 + 用户 2026-10-18 口径「10 月两个月场 = Fall of the Dark / Costume Party」",
     "tools/data/monthly_manual.json"
    ],
    "conf": "U",
@@ -1142,7 +1147,39 @@
     "energy": 4,
     "score_target": null,
     "rule": "element:dark",
-    "note": null
+    "note": "出战队需带对应元素（官方规则）"
+   }
+  },
+  "COSTUMEPARTY": {
+   "name": "COSTUME PARTY",
+   "tag": "monthly_character",
+   "element": null,
+   "char": null,
+   "monthly": true,
+   "kind": "月场·角色",
+   "window": {
+    "type": "monthly",
+    "days": 30,
+    "desc": "每月 1 日开，整月"
+   },
+   "from": "2026-10-01",
+   "until": "2026-11-01",
+   "official": {
+    "restriction": "防守队伍需为对应角色（角色待确认）",
+    "applies_to": "defense",
+    "note": "官方规则：角色场限制防守队伍的角色"
+   },
+   "src": [
+    "2026-10-18 用户口径: 10 月两个月场 = FALL OF THE DARK + COSTUME PARTY; 角色场按官方规则限制**防守队伍**的角色。⚠️ 具体是哪个角色官方公告未点名, 待游戏内防守队要求确认 ⇒ char=null, 不猜 (填错比留空更糟: 会锁死选人)",
+    "tools/data/monthly_manual.json"
+   ],
+   "conf": "A",
+   "project": {
+    "energy": 4,
+    "score_target": null,
+    "rule": null,
+    "note": "class 只约束防守队伍（官方规则）",
+    "rule_reason": "该类场无出战限制"
    }
   },
   "202609元素月场": {
@@ -1160,9 +1197,9 @@
    "from": "2026-09-01",
    "until": "2026-10-01",
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制"
+    "restriction": "出战队需为风元素",
+    "applies_to": "attack",
+    "note": "官方规则：元素场限制出战队元素"
    },
    "src": [
     "sessions.json 迁移实测(2026-10-06): 上面 AGAINST THE WIND 登记的是 sgmnow 官方名, 而本地场次是自起名「202609元素月场」, 按官方名匹配不上-> 落element 兜底, 标签粒度丢失(条件仍正确)。元素值 wind 取自同月官方条 (用户 2026-09-16 确认)。⚠️ 10-02 有人把「09-06 10-02」那条手工改成 dark, 2026-10-06 用户裁定: **9 月的场次按 9 月官方名 wind**, 那次 dark 是把本月(10月)的暗场加错了地方",
@@ -1173,7 +1210,7 @@
     "energy": 4,
     "score_target": null,
     "rule": "element:wind",
-    "note": null
+    "note": "出战队需带对应元素（官方规则）"
    }
   },
   "TRIALBYFIRE": {
@@ -1189,9 +1226,9 @@
     "desc": "周六–周日"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制",
+    "restriction": "出战队需为火元素",
+    "applies_to": "attack",
+    "note": "官方规则：元素场限制出战队元素",
     "modifier": "FLASH POINT"
    },
    "src": [
@@ -1203,7 +1240,7 @@
     "energy": 4,
     "score_target": 50000000,
     "rule": "element:fire",
-    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+    "note": "出战队需带对应元素（官方规则）"
    }
   },
   "THEBIGTHAW": {
@@ -1219,9 +1256,9 @@
     "desc": "周六–周日"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制",
+    "restriction": "出战队需为水元素",
+    "applies_to": "attack",
+    "note": "官方规则：元素场限制出战队元素",
     "modifier": "PERMAFROST"
    },
    "src": [
@@ -1233,7 +1270,7 @@
     "energy": 4,
     "score_target": 50000000,
     "rule": "element:water",
-    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+    "note": "出战队需带对应元素（官方规则）"
    }
   },
   "SHAKEDOWNJINX": {
@@ -1399,9 +1436,9 @@
     "desc": "周六–周日"
    },
    "official": {
-    "restriction": "无",
-    "applies_to": null,
-    "note": "官方未设出战角色/元素限制",
+    "restriction": "出战队需为暗元素",
+    "applies_to": "attack",
+    "note": "官方规则：元素场限制出战队元素",
     "modifier": "NYCTOPHOBIA"
    },
    "src": [
@@ -1414,7 +1451,7 @@
     "energy": 4,
     "score_target": 50000000,
     "rule": "element:dark",
-    "note": "元素场限制按项目约定（官方只给敌方增益，不强制我方元素）"
+    "note": "出战队需带对应元素（官方规则）"
    }
   }
  }
