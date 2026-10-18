@@ -107,6 +107,9 @@ python -m http.server 8080
 
 直接双击 `index.html` 会因浏览器拦 `fetch` 而读不到数据（页面会给出提示）。
 
+渲染冒烟测试（需要 jsdom）：`node smoke.js http://127.0.0.1:8080/`，断言当前卡片、8 行排期、
+44 行目录与待核实条目都渲染出来了。
+
 ## 免责
 
 非官方资料站，与 Autumn Games / Hidden Variable 无关。游戏内数值以客户端为准；本站只保证「来源可查」。
