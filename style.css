@@ -52,6 +52,9 @@ h3{font-size:14.5px;margin:0 0 8px;font-weight:650}
 .card{
   background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:14px 16px;display:flex;flex-direction:column;gap:6px;
+  /* ⚠️ grid item 的 min-width 默认是 auto：长 chip / 长 URL 会把卡片撑出网格列，
+     窄屏下尤其明显。显式归零，让内容自己换行。 */
+  min-width:0;
 }
 .card .row1{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .card .name{font-weight:650;font-size:15px;letter-spacing:.2px}
@@ -60,11 +63,11 @@ h3{font-size:14.5px;margin:0 0 8px;font-weight:650}
 .card .facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
 .chip{
   font-size:12px;padding:2px 8px;border-radius:6px;border:1px solid var(--line-2);
-  background:var(--bg);color:var(--ink-2);
+  background:var(--bg);color:var(--ink-2);overflow-wrap:anywhere;
 }
 .chip.warn{background:var(--warn-soft);border-color:#f0dcb8;color:var(--warn)}
 .chip.ok{background:#eaf6ef;border-color:#cfe8d8;color:var(--ok)}
-.card .src{font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.card .src{font-size:11.5px;color:var(--ink-3);margin-top:2px;overflow-wrap:anywhere}
 .empty{
   background:var(--panel);border:1px dashed var(--line);border-radius:var(--radius);
   padding:18px;color:var(--ink-3);font-size:13.5px;
@@ -72,7 +75,8 @@ h3{font-size:14.5px;margin:0 0 8px;font-weight:650}
 
 /* tables */
 .table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}
-table.grid{width:100%;border-collapse:collapse;font-size:13.5px;min-width:760px}
+/* min-width 太小会让月场列挤成三四行；宁可横滚，也别把「FALL OF THE DARK」拆碎 */
+table.grid{width:100%;border-collapse:collapse;font-size:13.5px;min-width:880px}
 table.grid th{
   text-align:left;font-weight:600;font-size:12.5px;color:var(--ink-3);
   padding:10px 12px;border-bottom:1px solid var(--line);background:#fbfcfd;white-space:nowrap;
@@ -94,6 +98,37 @@ table.grid tbody tr:hover{background:#fafbfd}
 .badge.B{background:#f2f4f7;border-color:var(--line);color:var(--ink-2)}
 .badge.C{background:var(--warn-soft);border-color:#f0dcb8;color:var(--warn)}
 .badge.D{background:#fdeeec;border-color:#f3d2cc;color:var(--bad)}
+
+/* 图形标识（元素圆标 / 角色缩写牌 / 类别线性图标）—— 由 icons.js 生成 */
+.ico{display:inline-flex;align-items:center;flex:none}
+/* 元素圆标与角色牌同视觉高度（1.5em 左右），否则卡片标题一高一低 */
+.ei{width:1.5em;height:1.5em;vertical-align:-.34em;flex:none}
+.ki{width:1em;height:1em;vertical-align:-.12em;flex:none}
+/* 角色缩写牌：一个角色固定一色，白字；hover 出全名（title） */
+.cb{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:1.55em;height:1.55em;border-radius:50%;background:var(--c);color:#fff;
+  font:700 .68em/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.02em;flex:none;
+}
+.row1 .nm{display:flex;align-items:center;gap:6px;min-width:0}
+.row1 .nm .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card .kind{display:inline-flex;align-items:center;gap:3px}
+.card .kind .ki{color:var(--ink-2)}
+.kl{margin:0 6px 0 3px;font-size:12.5px;color:var(--ink-2)}
+.nmx{margin-left:6px}
+/* 表格里字号小，图标跟着收一点，别把行高撑开 */
+table.grid td .ei{width:1.25em;height:1.25em;vertical-align:-.3em}
+table.grid td .ki{vertical-align:-2px}
+.filters button .ki{margin-right:4px;color:var(--ink-3)}
+.filters button[aria-pressed="true"] .ki{color:#fff}
+
+/* 图例：元素五色 + 角色缩写牌 */
+.legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:12px 0 4px;font-size:13px;color:var(--ink-2)}
+.legend .lg-label{color:var(--ink-3);font-size:12.5px}
+.legend .lg-item{display:inline-flex;align-items:center;gap:4px}
+.legend .lg-item .ei{width:1.35em;height:1.35em;vertical-align:-.3em}
+.legend .lg-sep{width:1px;height:14px;background:var(--line);margin:0 2px}
 
 /* filters */
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}

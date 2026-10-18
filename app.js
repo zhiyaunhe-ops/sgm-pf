@@ -48,11 +48,42 @@
     return b;
   }
 
+  /* ---------------- 图形标识 ----------------
+   * 全部来自 icons.js 的 window.PFIcons（内联 SVG / 缩写圆牌）。这里是唯一的拼装点，
+   * 别在别处再拼一遍 HTML。icons.js 没载入时降级为纯文字，不报错。 */
+  const ICONS = window.PFIcons || null;
+  /* ⚠️ 必须当场调用，不能写成 `const esc = s => (ICONS && ICONS.esc) || ...`
+   *    —— 那样返回的是函数本身，塞进模板串会渲染成源码。 */
+  const esc = s => (ICONS ? ICONS.esc(s) : String(s == null ? '' : s));
+  const ico = html => {
+    const s = el('span', 'ico');
+    s.innerHTML = html || '';
+    return s;
+  };
+  const charBadge = n => (ICONS ? ICONS.char(n) : '');
+  const elemIcon = e => (ICONS ? ICONS.element(e) : '');
+  const kindIcon = t => (ICONS ? ICONS.kind(t) : '');
+
+  /** 这张场次属于「谁」：角色场给角色牌，元素场给元素图标，其余空。 */
+  function whoBadge(a) {
+    if (a.tag === 'character' || a.tag === 'monthly_character') return charBadge(a.char);
+    if (a.tag === 'element' || a.tag === 'monthly_element') return elemIcon(a.element);
+    return '';
+  }
+
   function card(a, when) {
     const c = el('div', 'card');
     const r1 = el('div', 'row1');
-    r1.append(el('span', 'name', a.name));
-    r1.append(el('span', 'kind', TYPE_LABEL[a.tag] || a.tag));
+    const nm = el('span', 'nm');
+    const wb = whoBadge(a);
+    if (wb) nm.append(ico(wb));
+    nm.append(el('span', 'name', a.name));
+    r1.append(nm);
+    const kd = el('span', 'kind');
+    const ki = ico(kindIcon(a.tag));
+    if (ki.innerHTML) kd.append(ki);
+    kd.append(document.createTextNode(TYPE_LABEL[a.tag] || a.tag));
+    r1.append(kd);
     c.append(r1);
     c.append(el('div', 'when', when));
 
@@ -168,7 +199,7 @@
     return today.open.map(o => {
       if (o.type === 'gold') {
         const c = el('div', 'card');
-        c.append(row1('金币场（Medici）', '金币场'));
+        c.append(row1('金币场（Medici）', '金币场', 'gold'));
         c.append(el('div', 'when', '周三起 · 持续 1–2 天'));
         const f = el('div', 'facts');
         f.append(el('span', 'chip ok', '官方限制：无'));
@@ -194,10 +225,13 @@
     return d.toISOString().slice(0, 10);
   };
 
-  function row1(name, kind) {
+  function row1(name, kindLabel, tag) {
     const r = el('div', 'row1');
-    r.append(el('span', 'name', name));
-    r.append(el('span', 'kind', kind));
+    const nm = el('span', 'nm');
+    if (tag) nm.append(ico(kindIcon(tag)));
+    nm.append(el('span', 'name', name));
+    r.append(nm);
+    r.append(el('span', 'kind', kindLabel));
     return r;
   }
 
@@ -228,22 +262,48 @@
         const k = o.type.indexOf('monthly') === 0 ? 'monthly' : o.type;
         (bucket[k] || (bucket[k] = [])).push(o);
       });
+      /* fmt 返回 HTML（图标 + 文字），由这里塞进去 —— 所以 fmt 里每个动态值都要 esc()。
+       * ⚠️ 不能用 el('div', cls, fmt(o))：el 的第三个参数走 textContent，HTML 会被转义成
+       *    源码文本（这一版就踩过，表格里显示一堆 <span class="cb">）。 */
       const put = (key, fmt) => {
         const td = tr.appendChild(el('td'));
         if (!bucket[key].length) { td.className = 'muted'; td.textContent = '—'; return; }
         bucket[key].forEach(o => {
-          const line = el('div', o.unverified ? 'muted' : null, fmt(o));
+          const line = el('div', o.candidate ? 'muted' : null);
+          line.innerHTML = fmt(o);
           td.append(line);
         });
       };
-      put('character', o => `${o.char} · ${o.name || '—'}`);
-      put('element', o => `${ELEM_ZH[o.element] || o.element} · ${o.name || '—'}`);
+      put('character', o => charBadge(o.char) + `<span class="nmx">${esc(o.name || '—')}</span>`);
+      put('element', o => elemIcon(o.element) +
+        `<span class="nmx">${esc(o.name || '—')}</span>`);
       put('gold', () => 'Medici（场名轮换）');
       put('assist', () => 'Seeing Stars');
       put('move', o => (o.candidate ? '隔周候选（推算）' : 'Show Me Your Moves'));
-      put('monthly', o => o.name);
+      put('monthly', o => (o.element ? elemIcon(o.element) : '') +
+        `<span class="nmx">${esc(o.name)}</span>`);
       tb.append(tr);
     });
+  }
+
+  /** 图例：元素五色圆标 + 角色缩写牌说明（图标含义只在这里讲一次）。 */
+  function renderLegend() {
+    const box = $('#legend');
+    if (!box) return;
+    if (!ICONS) { box.remove(); return; }
+    box.append(el('span', 'lg-label', '元素'));
+    ['water', 'fire', 'wind', 'light', 'dark'].forEach(k => {
+      const it = el('span', 'lg-item');
+      it.append(ico(elemIcon(k)));
+      it.append(el('span', null, ELEM_ZH[k] || k));
+      box.append(it);
+    });
+    box.append(el('span', 'lg-sep'));
+    box.append(el('span', 'lg-label', '角色'));
+    const demo = el('span', 'lg-item');
+    demo.append(ico(charBadge('Parasoul')));
+    demo.append(el('span', null, '缩写牌（悬停看全名，九对循环见「轮换规则」）'));
+    box.append(demo);
   }
 
   function renderCatalog(data) {
@@ -253,7 +313,9 @@
     let cur = 'all', q = '';
     const filters = $('#filters');
     groups.forEach(([g, label]) => {
-      const b = el('button', null, label);
+      const b = el('button');
+      if (g !== 'all') b.innerHTML = kindIcon(g);
+      b.append(document.createTextNode(label));
       b.setAttribute('aria-pressed', String(g === 'all'));
       b.onclick = () => {
         cur = g;
@@ -280,9 +342,12 @@
       rows.forEach(a => {
         const tr = el('tr');
         tr.append(el('td', 'cat-name', a.name + (a.monthly ? '（月场）' : '')));
-        tr.append(el('td', null, (TYPE_LABEL[a.tag] || a.tag) +
-          (a.element ? ' · ' + (ELEM_ZH[a.element] || a.element) : '') +
-          (a.char ? ' · ' + a.char : '')));
+        const info = tr.appendChild(el('td'));
+        info.innerHTML = kindIcon(a.tag) +
+          `<span class="kl">${esc(TYPE_LABEL[a.tag] || a.tag)}</span>` +
+          (a.element ? elemIcon(a.element) +
+            `<span class="kl">${esc(ELEM_ZH[a.element] || a.element)}</span>` : '') +
+          (a.char ? charBadge(a.char) + `<span class="kl">${esc(a.char)}</span>` : '');
         const o = tr.appendChild(el('td'));
         o.append(restrictionText(a.official));
         if (a.official && a.official.modifier) {
@@ -304,12 +369,18 @@
     const pairs = $('#pairs');
     (r.pair_order || []).forEach(p => {
       const li = el('li');
-      li.append(el('b', null, p[0] + ' / ' + p[1]));
+      /* 这里是图标的「字典」：徽章 + 全名并排，后面表格里只出现缩写牌时能回来对。 */
+      p.forEach((c, i) => {
+        if (i) li.append(document.createTextNode(' / '));
+        li.append(ico(charBadge(c)));
+        li.append(el('span', 'kl', c));
+      });
       pairs.append(li);
     });
     const elems = $('#elems');
     (r.element_order || []).forEach((e, i) => {
       const li = el('li');
+      li.append(ico(elemIcon(e)));
       li.append(el('b', null, (ELEM_ZH[e] || e) + '（' + e + '）'));
       li.append(document.createTextNode(' · 第 ' + (i + 1) + ' 周'));
       elems.append(li);
@@ -383,6 +454,7 @@
       $('#now-hint').textContent = '按游戏日 ' + data.game_day + ' 计算';
 
       renderDays(days, data);
+      renderLegend();
       renderCatalog(data);
       renderRotation(data);
       renderSources(data);

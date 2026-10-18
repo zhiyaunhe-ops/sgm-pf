@@ -25,9 +25,13 @@ const base = process.argv[2] || 'http://127.0.0.1:8899/';
   const w = dom.window;
   // 手动注入 app.js（resources:usable 对相对 src 不总是可靠）
   await new Promise(r => w.addEventListener('load', r, { once: true }));
-  const s = w.document.createElement('script');
-  s.textContent = fs.readFileSync(path.join(__dirname, 'app.js'), 'utf8');
-  w.document.body.appendChild(s);
+  /* ⚠️ icons.js 必须先于 app.js 注入：app.js 从 window.PFIcons 取图标，
+   *    顺序反了会静默降级成纯文字（页面不报错，图标全没了）。 */
+  for (const f of ['icons.js', 'app.js']) {
+    const s = w.document.createElement('script');
+    s.textContent = fs.readFileSync(path.join(__dirname, f), 'utf8');
+    w.document.body.appendChild(s);
+  }
 
   await new Promise(r => setTimeout(r, 1200));
 
@@ -58,6 +62,19 @@ const base = process.argv[2] || 'http://127.0.0.1:8899/';
   check(!!w.document.querySelector('.brand img'), 'header 没有 logo');
   check(!!w.document.querySelector('link[rel="icon"]'), 'head 没有 favicon');
   console.log('图标: header logo + favicon 都在');
+  /* 图形标识：元素圆标 / 角色缩写牌 / 类别线性图标都要真的渲染出来 */
+  const ei = $('.ei'), cb = $('.cb'), ki = $('.ki');
+  console.log('元素图标:', ei.length, '角色牌:', cb.length, '类别图标:', ki.length);
+  check(ei.length >= 3, '元素图标没渲染 (.ei=' + ei.length + ')');
+  check(cb.length >= 3, '角色缩写牌没渲染 (.cb=' + cb.length + ')');
+  check(ki.length >= 5, '类别图标没渲染 (.ki=' + ki.length + ')');
+  check(!!w.document.querySelector('#day-table tbody tr td:nth-child(2) .cb'),
+        '逐日表角色场单元格里没有角色牌');
+  /* 图例：五个元素都要显示出来（水/火/风/光/暗），否则读者不知道色块含义 */
+  const lg = $('.legend .lg-item .ei');
+  console.log('图例元素数:', lg.length);
+  check(lg.length === 5, '图例元素不是 5 个 (实际 ' + lg.length + ')');
+  check($('.legend .cb').length >= 1, '图例里没有角色牌示例');
   /* 招式场：本周(10/17)必须空、下周末必须是「候选」—— 这正是用户 10-18 纠的点 */
   const move = i => rows[i] ? rows[i].children[5].textContent.trim() : '(缺行)';
   console.log('招式场 本周末:', JSON.stringify(move(0)), '| 下周末:', JSON.stringify(move(7)));

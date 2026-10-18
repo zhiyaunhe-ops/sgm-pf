@@ -40,7 +40,8 @@
   <section id="now">
     <h2>当前开放 <span class="hint" id="now-hint"></span></h2>
     <div class="cards" id="now-cards"><p class="loading">读取中…</p></div>
-    <p class="note">时间窗按「游戏日」计算：10:00 太平洋时间换日。北京时间约为次日 01:00（夏令时）或 02:00（冬令时）。</p>
+    <div class="legend" id="legend"><!-- 元素 / 角色 的图形图例，由 app.js 填 --></div>
+    <p class="note">时间窗按「游戏日」计算：10:00 太平洋时间换日，北京时间约为次日 01:00（夏令时）或 02:00（冬令时）。</p>
   </section>
 
   <section id="weeks">
@@ -139,6 +140,7 @@
   </div>
 </footer>
 
+<script src="icons.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
