@@ -76,6 +76,68 @@
     return c;
   }
 
+
+  /* ---------------- 排期：前端按公式算 ----------------
+   * 为什么不在页面里直接用 schedule.json：那份是**生成时**算的 8 周快照，
+   * 过几周就整表过期（页面显示一堆过去的日期）。轮换公式是稳定的，放前端算，
+   * 页面就永远不会「因为没重新生成而看起来坏掉」。
+   * schedule.json 仍发布（给 APK / 别的消费者），这里只在缺 rotation 时兜底。 */
+
+  /** 当前游戏日 (YYYY-MM-DD)：太平洋时间 - 10 小时。10:00 PT 换日。 */
+  function currentGameDay() {
+    try {
+      const pt = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+      const d = new Date(pt.getTime() - 10 * 3600 * 1000);
+      const p = n => String(n).padStart(2, '0');
+      return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+    } catch (e) {
+      return new Date().toISOString().slice(0, 10);   // 拿不到时区就退 UTC（只是高亮错一天）
+    }
+  }
+
+  const DAY = 86400000;
+  const toUTC = iso => new Date(iso + 'T00:00:00Z').getTime();
+  const toISO = ms => new Date(ms).toISOString().slice(0, 10);
+
+  function buildWeeks(data, day, n) {
+    const rot = data.rotation;
+    if (!rot || !rot.anchor || !(rot.pair_order || []).length) return null;
+    const anchor = toUTC(rot.anchor);
+    const d = new Date(day + 'T00:00:00Z');
+    const wd = (d.getUTCDay() + 6) % 7;              // 0 = 周一
+    let mon = d.getTime() - wd * DAY;
+    const pairs = rot.pair_order, elems = rot.element_order;
+    const out = [];
+    for (let i = 0; i < n; i++, mon += 7 * DAY) {
+      const w = Math.round((mon - anchor) / (7 * DAY));
+      const pair = pairs[((w % pairs.length) + pairs.length) % pairs.length];
+      const elem = elems[((w % elems.length) + elems.length) % elems.length];
+      const charArena = c => {
+        const hit = Object.values(data.arenas).find(a => a.tag === 'character' && a.char === c);
+        return hit ? hit.name : '';
+      };
+      const elemArena = Object.values(data.arenas).find(a => a.tag === 'element' && a.element === elem);
+      out.push({
+        monday: toISO(mon),
+        character: [
+          { from: toISO(mon), to: toISO(mon + 2 * DAY), char: pair[0], name: charArena(pair[0]) },
+          { from: toISO(mon + 3 * DAY), to: toISO(mon + 5 * DAY), char: pair[1], name: charArena(pair[1]) },
+        ],
+        element: {
+          from: toISO(mon + 5 * DAY), to: toISO(mon + 6 * DAY),
+          element: elem, name: elemArena ? elemArena.name : '',
+        },
+        gold: { from: toISO(mon + 2 * DAY), to: toISO(mon + 3 * DAY), name: null },
+        assist: { from: toISO(mon + 4 * DAY), to: toISO(mon + 5 * DAY), name: 'SEEING STARS' },
+        move: { from: toISO(mon + 5 * DAY), to: toISO(mon + 6 * DAY), name: 'SHOW ME YOUR MOVES', biweekly: true },
+        monthly: Object.values(data.arenas)
+          .filter(a => a.monthly && a.from && a.until && a.from <= day && day < a.until)
+          .map(a => ({ name: a.name, element: a.element, tag: a.tag, until: a.until })),
+      });
+    }
+    return out;
+  }
+
   function openNow(data, sched) {
     const day = data.game_day;
     const out = [];
@@ -289,10 +351,16 @@
       ]);
       if (!aRes.ok || !sRes.ok) throw new Error('HTTP ' + aRes.status + '/' + sRes.status);
       const data = await aRes.json();
-      const sched = await sRes.json();
+      const fallback = await sRes.json();
+
+      /* 排期以「此刻按公式算」为准；只有缺 rotation 时才退回生成时的那份快照。 */
+      const today = currentGameDay();
+      const weeks = buildWeeks(data, today, 8) || fallback.weeks || [];
+      const sched = { weeks };
+      data.game_day = today;
 
       $('#m-ver').textContent = '数据版本 ' + (data.updated_at || '—');
-      $('#m-day').textContent = '游戏日 ' + (data.game_day || '—');
+      $('#m-day').textContent = '游戏日 ' + today;
       $('#m-count').textContent = Object.keys(data.arenas || {}).length + ' 条场次';
 
       const now = openNow(data, sched);
