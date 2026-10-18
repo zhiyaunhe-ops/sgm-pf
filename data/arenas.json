@@ -4,7 +4,7 @@
  "game_day": "2026-10-17",
  "game_version": "8.11",
  "monthly_slots": 2,
- "source": "https://zhiyaunhe-ops.github.io/data/arenas.json",
+ "source": "https://zhiyaunhe-ops.github.io/sgm-pf/data/arenas.json",
  "rotation": {
   "anchor": "2024-06-03",
   "pair_order": [

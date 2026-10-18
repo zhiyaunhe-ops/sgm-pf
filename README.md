@@ -2,7 +2,7 @@
 
 Skullgirls Mobile 场次（Prize Fight）轮换与出战条件的公开数据集，配套一个静态页面：
 
-- 站点：<https://zhiyaunhe-ops.github.io/>
+- 站点：<https://zhiyaunhe-ops.github.io/sgm-pf/>
 - 数据：`data/arenas.json`（场次目录）、`data/schedule.json`（未来 8 周排期）
 
 存在的原因：`sgmnow`（Score Cutoffs）只给得出「当期名字」，给不出类别、出战条件与轮换依据，
