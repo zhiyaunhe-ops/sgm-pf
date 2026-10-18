@@ -393,5 +393,971 @@
     }
    ]
   }
+ ],
+ "daily": [
+  {
+   "date": "2026-10-12",
+   "weekday": "一",
+   "open": [
+    {
+     "type": "character",
+     "char": "Filia",
+     "name": "TWO TO TANGLE"
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-13",
+   "weekday": "二",
+   "open": [
+    {
+     "type": "character",
+     "char": "Filia",
+     "name": "TWO TO TANGLE"
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "weekday": "三",
+   "open": [
+    {
+     "type": "character",
+     "char": "Filia",
+     "name": "TWO TO TANGLE"
+    },
+    {
+     "type": "gold",
+     "name": null
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-15",
+   "weekday": "四",
+   "open": [
+    {
+     "type": "character",
+     "char": "Parasoul",
+     "name": "DAME OF THRONES"
+    },
+    {
+     "type": "gold",
+     "name": null
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-16",
+   "weekday": "五",
+   "open": [
+    {
+     "type": "character",
+     "char": "Parasoul",
+     "name": "DAME OF THRONES"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-17",
+   "weekday": "六",
+   "open": [
+    {
+     "type": "character",
+     "char": "Parasoul",
+     "name": "DAME OF THRONES"
+    },
+    {
+     "type": "element",
+     "element": "light",
+     "name": "A SHINING EXAMPLE"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-18",
+   "weekday": "日",
+   "open": [
+    {
+     "type": "element",
+     "element": "light",
+     "name": "A SHINING EXAMPLE"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "weekday": "一",
+   "open": [
+    {
+     "type": "character",
+     "char": "Beowulf",
+     "name": "RUMBLE PACK"
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-20",
+   "weekday": "二",
+   "open": [
+    {
+     "type": "character",
+     "char": "Beowulf",
+     "name": "RUMBLE PACK"
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "weekday": "三",
+   "open": [
+    {
+     "type": "character",
+     "char": "Beowulf",
+     "name": "RUMBLE PACK"
+    },
+    {
+     "type": "gold",
+     "name": null
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "weekday": "四",
+   "open": [
+    {
+     "type": "character",
+     "char": "Peacock",
+     "name": "CUTTING ROOM FLOOR"
+    },
+    {
+     "type": "gold",
+     "name": null
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "weekday": "五",
+   "open": [
+    {
+     "type": "character",
+     "char": "Peacock",
+     "name": "CUTTING ROOM FLOOR"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-24",
+   "weekday": "六",
+   "open": [
+    {
+     "type": "character",
+     "char": "Peacock",
+     "name": "CUTTING ROOM FLOOR"
+    },
+    {
+     "type": "element",
+     "element": "dark",
+     "name": "A SHOT IN THE DARK"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-25",
+   "weekday": "日",
+   "open": [
+    {
+     "type": "element",
+     "element": "dark",
+     "name": "A SHOT IN THE DARK"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-26",
+   "weekday": "一",
+   "open": [
+    {
+     "type": "character",
+     "char": "Painwheel",
+     "name": "NO PAIN NO GAIN"
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-27",
+   "weekday": "二",
+   "open": [
+    {
+     "type": "character",
+     "char": "Painwheel",
+     "name": "NO PAIN NO GAIN"
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "weekday": "三",
+   "open": [
+    {
+     "type": "character",
+     "char": "Painwheel",
+     "name": "NO PAIN NO GAIN"
+    },
+    {
+     "type": "gold",
+     "name": null
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-29",
+   "weekday": "四",
+   "open": [
+    {
+     "type": "character",
+     "char": "Black Dahlia",
+     "name": "FRAGS TO RICHES"
+    },
+    {
+     "type": "gold",
+     "name": null
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "weekday": "五",
+   "open": [
+    {
+     "type": "character",
+     "char": "Black Dahlia",
+     "name": "FRAGS TO RICHES"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-31",
+   "weekday": "六",
+   "open": [
+    {
+     "type": "character",
+     "char": "Black Dahlia",
+     "name": "FRAGS TO RICHES"
+    },
+    {
+     "type": "element",
+     "element": "water",
+     "name": "HIGH TIDE"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    },
+    {
+     "type": "monthly_element",
+     "name": "COSTUME PARTY",
+     "element": "dark"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-01",
+   "weekday": "日",
+   "open": [
+    {
+     "type": "element",
+     "element": "water",
+     "name": "HIGH TIDE"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    }
+   ]
+  },
+  {
+   "date": "2026-11-02",
+   "weekday": "一",
+   "open": [
+    {
+     "type": "character",
+     "char": "Double",
+     "name": "SECOND TO NUN"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "weekday": "二",
+   "open": [
+    {
+     "type": "character",
+     "char": "Double",
+     "name": "SECOND TO NUN"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-04",
+   "weekday": "三",
+   "open": [
+    {
+     "type": "character",
+     "char": "Double",
+     "name": "SECOND TO NUN"
+    },
+    {
+     "type": "gold",
+     "name": null
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05",
+   "weekday": "四",
+   "open": [
+    {
+     "type": "character",
+     "char": "Squigly",
+     "name": "NIGHT'S GHOUL"
+    },
+    {
+     "type": "gold",
+     "name": null
+    }
+   ]
+  },
+  {
+   "date": "2026-11-06",
+   "weekday": "五",
+   "open": [
+    {
+     "type": "character",
+     "char": "Squigly",
+     "name": "NIGHT'S GHOUL"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-07",
+   "weekday": "六",
+   "open": [
+    {
+     "type": "character",
+     "char": "Squigly",
+     "name": "NIGHT'S GHOUL"
+    },
+    {
+     "type": "element",
+     "element": "fire",
+     "name": "RING OF FIRE"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    }
+   ]
+  },
+  {
+   "date": "2026-11-08",
+   "weekday": "日",
+   "open": [
+    {
+     "type": "element",
+     "element": "fire",
+     "name": "RING OF FIRE"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    }
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "weekday": "一",
+   "open": [
+    {
+     "type": "character",
+     "char": "Valentine",
+     "name": "CASKET MATCH"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-10",
+   "weekday": "二",
+   "open": [
+    {
+     "type": "character",
+     "char": "Valentine",
+     "name": "CASKET MATCH"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "weekday": "三",
+   "open": [
+    {
+     "type": "character",
+     "char": "Valentine",
+     "name": "CASKET MATCH"
+    },
+    {
+     "type": "gold",
+     "name": null
+    }
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "weekday": "四",
+   "open": [
+    {
+     "type": "character",
+     "char": "Fukua",
+     "name": "A LEAGUE OF HER CLONE"
+    },
+    {
+     "type": "gold",
+     "name": null
+    }
+   ]
+  },
+  {
+   "date": "2026-11-13",
+   "weekday": "五",
+   "open": [
+    {
+     "type": "character",
+     "char": "Fukua",
+     "name": "A LEAGUE OF HER CLONE"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-14",
+   "weekday": "六",
+   "open": [
+    {
+     "type": "character",
+     "char": "Fukua",
+     "name": "A LEAGUE OF HER CLONE"
+    },
+    {
+     "type": "element",
+     "element": "wind",
+     "name": "EYE OF THE STORM"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    }
+   ]
+  },
+  {
+   "date": "2026-11-15",
+   "weekday": "日",
+   "open": [
+    {
+     "type": "element",
+     "element": "wind",
+     "name": "EYE OF THE STORM"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    }
+   ]
+  },
+  {
+   "date": "2026-11-16",
+   "weekday": "一",
+   "open": [
+    {
+     "type": "character",
+     "char": "Eliza",
+     "name": "BLOOD SPORT"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-17",
+   "weekday": "二",
+   "open": [
+    {
+     "type": "character",
+     "char": "Eliza",
+     "name": "BLOOD SPORT"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-18",
+   "weekday": "三",
+   "open": [
+    {
+     "type": "character",
+     "char": "Eliza",
+     "name": "BLOOD SPORT"
+    },
+    {
+     "type": "gold",
+     "name": null
+    }
+   ]
+  },
+  {
+   "date": "2026-11-19",
+   "weekday": "四",
+   "open": [
+    {
+     "type": "character",
+     "char": "Marie",
+     "name": "DEATH METTLE"
+    },
+    {
+     "type": "gold",
+     "name": null
+    }
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "weekday": "五",
+   "open": [
+    {
+     "type": "character",
+     "char": "Marie",
+     "name": "DEATH METTLE"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-21",
+   "weekday": "六",
+   "open": [
+    {
+     "type": "character",
+     "char": "Marie",
+     "name": "DEATH METTLE"
+    },
+    {
+     "type": "element",
+     "element": "light",
+     "name": "A SHINING EXAMPLE"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    }
+   ]
+  },
+  {
+   "date": "2026-11-22",
+   "weekday": "日",
+   "open": [
+    {
+     "type": "element",
+     "element": "light",
+     "name": "A SHINING EXAMPLE"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    }
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "weekday": "一",
+   "open": [
+    {
+     "type": "character",
+     "char": "Annie",
+     "name": "INFINITY AND BEYOND"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-24",
+   "weekday": "二",
+   "open": [
+    {
+     "type": "character",
+     "char": "Annie",
+     "name": "INFINITY AND BEYOND"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "weekday": "三",
+   "open": [
+    {
+     "type": "character",
+     "char": "Annie",
+     "name": "INFINITY AND BEYOND"
+    },
+    {
+     "type": "gold",
+     "name": null
+    }
+   ]
+  },
+  {
+   "date": "2026-11-26",
+   "weekday": "四",
+   "open": [
+    {
+     "type": "character",
+     "char": "Big Band",
+     "name": "BIG BEN'S BEATDOWN"
+    },
+    {
+     "type": "gold",
+     "name": null
+    }
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "weekday": "五",
+   "open": [
+    {
+     "type": "character",
+     "char": "Big Band",
+     "name": "BIG BEN'S BEATDOWN"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "weekday": "六",
+   "open": [
+    {
+     "type": "character",
+     "char": "Big Band",
+     "name": "BIG BEN'S BEATDOWN"
+    },
+    {
+     "type": "element",
+     "element": "dark",
+     "name": "A SHOT IN THE DARK"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    }
+   ]
+  },
+  {
+   "date": "2026-11-29",
+   "weekday": "日",
+   "open": [
+    {
+     "type": "element",
+     "element": "dark",
+     "name": "A SHOT IN THE DARK"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    }
+   ]
+  },
+  {
+   "date": "2026-11-30",
+   "weekday": "一",
+   "open": [
+    {
+     "type": "character",
+     "char": "Cerebella",
+     "name": "HIGH WIRE HIJINKS"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-01",
+   "weekday": "二",
+   "open": [
+    {
+     "type": "character",
+     "char": "Cerebella",
+     "name": "HIGH WIRE HIJINKS"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-02",
+   "weekday": "三",
+   "open": [
+    {
+     "type": "character",
+     "char": "Cerebella",
+     "name": "HIGH WIRE HIJINKS"
+    },
+    {
+     "type": "gold",
+     "name": null
+    }
+   ]
+  },
+  {
+   "date": "2026-12-03",
+   "weekday": "四",
+   "open": [
+    {
+     "type": "character",
+     "char": "Robo-Fortune",
+     "name": "ONES AND ZEROS"
+    },
+    {
+     "type": "gold",
+     "name": null
+    }
+   ]
+  },
+  {
+   "date": "2026-12-04",
+   "weekday": "五",
+   "open": [
+    {
+     "type": "character",
+     "char": "Robo-Fortune",
+     "name": "ONES AND ZEROS"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-05",
+   "weekday": "六",
+   "open": [
+    {
+     "type": "character",
+     "char": "Robo-Fortune",
+     "name": "ONES AND ZEROS"
+    },
+    {
+     "type": "element",
+     "element": "water",
+     "name": "HIGH TIDE"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    }
+   ]
+  },
+  {
+   "date": "2026-12-06",
+   "weekday": "日",
+   "open": [
+    {
+     "type": "element",
+     "element": "water",
+     "name": "HIGH TIDE"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "unverified": true
+    }
+   ]
+  }
  ]
 }

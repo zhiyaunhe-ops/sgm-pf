@@ -99,96 +99,85 @@
   const toUTC = iso => new Date(iso + 'T00:00:00Z').getTime();
   const toISO = ms => new Date(ms).toISOString().slice(0, 10);
 
-  function buildWeeks(data, day, n) {
+  /**
+   * 逐日排期（**按天算，不是按周算**）。
+   *
+   * 一周里每天开放的场次并不一样：角色场周一–周三一个角色、周四–周六换一个，
+   * 周日空档；元素场只在周六日；金币场周三起；星场周五–周六。所以这里以「天」为单位。
+   * 全部由 rotation 里的锚点与顺序推出来，不读任何快照 —— 页面自然不会过期。
+   */
+  function buildDays(data, day, n) {
     const rot = data.rotation;
     if (!rot || !rot.anchor || !(rot.pair_order || []).length) return null;
     const anchor = toUTC(rot.anchor);
-    const d = new Date(day + 'T00:00:00Z');
-    const wd = (d.getUTCDay() + 6) % 7;              // 0 = 周一
-    let mon = d.getTime() - wd * DAY;
     const pairs = rot.pair_order, elems = rot.element_order;
+    const arenas = Object.values(data.arenas);
+    const charArena = c => {
+      const h = arenas.find(a => a.tag === 'character' && a.char === c);
+      return h ? h.name : '';
+    };
+    const elemArena = e => {
+      const h = arenas.find(a => a.tag === 'element' && a.element === e);
+      return h ? h.name : '';
+    };
+    const monthlies = arenas.filter(a => a.monthly && a.from && a.until);
+    const wdName = '一二三四五六日';
+
+    const start = toUTC(day);
     const out = [];
-    for (let i = 0; i < n; i++, mon += 7 * DAY) {
+    for (let i = 0; i < n; i++) {
+      const ms = start + i * DAY;
+      const iso = toISO(ms);
+      const wd = (new Date(ms).getUTCDay() + 6) % 7;          // 0 = 周一
+      const mon = ms - wd * DAY;
       const w = Math.round((mon - anchor) / (7 * DAY));
       const pair = pairs[((w % pairs.length) + pairs.length) % pairs.length];
       const elem = elems[((w % elems.length) + elems.length) % elems.length];
-      const charArena = c => {
-        const hit = Object.values(data.arenas).find(a => a.tag === 'character' && a.char === c);
-        return hit ? hit.name : '';
-      };
-      const elemArena = Object.values(data.arenas).find(a => a.tag === 'element' && a.element === elem);
-      out.push({
-        monday: toISO(mon),
-        character: [
-          { from: toISO(mon), to: toISO(mon + 2 * DAY), char: pair[0], name: charArena(pair[0]) },
-          { from: toISO(mon + 3 * DAY), to: toISO(mon + 5 * DAY), char: pair[1], name: charArena(pair[1]) },
-        ],
-        element: {
-          from: toISO(mon + 5 * DAY), to: toISO(mon + 6 * DAY),
-          element: elem, name: elemArena ? elemArena.name : '',
-        },
-        gold: { from: toISO(mon + 2 * DAY), to: toISO(mon + 3 * DAY), name: null },
-        assist: { from: toISO(mon + 4 * DAY), to: toISO(mon + 5 * DAY), name: 'SEEING STARS' },
-        move: { from: toISO(mon + 5 * DAY), to: toISO(mon + 6 * DAY), name: 'SHOW ME YOUR MOVES', biweekly: true },
-        monthly: Object.values(data.arenas)
-          .filter(a => a.monthly && a.from && a.until && a.from <= day && day < a.until)
-          .map(a => ({ name: a.name, element: a.element, tag: a.tag, until: a.until })),
-      });
+      const open = [];
+      if (wd <= 2) open.push({ type: 'character', char: pair[0], name: charArena(pair[0]), slot: '周一–周三' });
+      else if (wd <= 5) open.push({ type: 'character', char: pair[1], name: charArena(pair[1]), slot: '周四–周六' });
+      if (wd >= 5) open.push({ type: 'element', element: elem, name: elemArena(elem) });
+      if (wd === 2 || wd === 3) open.push({ type: 'gold', name: null });
+      if (wd === 4 || wd === 5) open.push({ type: 'assist', name: 'SEEING STARS' });
+      /* 招式场：官方写「周六–周日、隔周」。窗口确定、相位不定 ⇒ 标窗口但显式标未核实，
+       * 别让读者以为今天一定有。 */
+      if (wd >= 5) open.push({ type: 'move', name: 'SHOW ME YOUR MOVES', unverified: true });
+      monthlies.filter(m => m.from <= iso && iso < m.until)
+        .forEach(m => open.push({ type: m.tag, name: m.name, element: m.element, until: m.until }));
+      out.push({ date: iso, weekday: wdName[wd], open });
     }
     return out;
   }
 
-  function openNow(data, sched) {
-    const day = data.game_day;
-    const out = [];
-    const week = (sched.weeks || []).find(w => w.monday <= day && day <= addDays(w.monday, 6));
-    if (week) {
-      (week.character || []).forEach(c => {
-        if (day >= c.from && day <= c.to) {
-          const a = find(data, c.name);
-          out.push(card(a || fallback(c.name, 'character', c.char, c),
-                        `${fmtDay(c.from)} – ${fmtDay(c.to)} · ${c.char} 角色场`));
-        }
-      });
-      const e = week.element;
-      if (e && day >= e.from && day <= e.to) {
-        const a = find(data, e.name);
-        out.push(card(a || fallback(e.name, 'element', null, e, e.element),
-                      `${fmtDay(e.from)} – ${fmtDay(e.to)} · ${ELEM_ZH[e.element] || e.element}元素场`));
-      }
-      const g = week.gold;
-      if (g && day >= g.from && day <= g.to) {
+  /** 缺 rotation 时的兜底：用生成时导出的逐日快照（只在 >= 今天 的部分）。 */
+  function daysFromJson(daily, today, n) {
+    if (!daily || !daily.length) return [];
+    return daily.filter(d => d.date >= today).slice(0, n);
+  }
+
+  function openNow(data, days) {
+    const today = days.find(d => d.date === data.game_day) || days[0];
+    if (!today) return [];
+    return today.open.map(o => {
+      if (o.type === 'gold') {
         const c = el('div', 'card');
         c.append(row1('金币场（Medici）', '金币场'));
-        c.append(el('div', 'when', `${fmtDay(g.from)} 起 · 持续 1–2 天`));
+        c.append(el('div', 'when', '周三起 · 持续 1–2 天'));
         const f = el('div', 'facts');
         f.append(el('span', 'chip ok', '官方限制：无'));
         f.append(el('span', 'chip', '本项目：4 钉 · 目标 4kw'));
         f.append(el('span', 'chip warn', '场名轮换顺序未确认'));
         c.append(f);
-        c.append(el('div', 'src', '依据：SGM Wiki 金币场段（周三开）+ 排期公式'));
-        out.push(c);
+        c.append(el('div', 'src', '依据：SGM Wiki 金币场段（周三开）+ 轮换公式'));
+        return c;
       }
-      const s = week.assist;
-      if (s && day >= s.from && day <= s.to) {
-        const a = find(data, s.name);
-        out.push(card(a || fallback(s.name, 'assist', null, s), `${fmtDay(s.from)} – ${fmtDay(s.to)} · 每周`));
-      }
-      const m = week.move;
-      if (m && day >= m.from && day <= m.to) {
-        const a = find(data, m.name);
-        const c = card(a || fallback(m.name, 'move', null, m),
-                       `${fmtDay(m.from)} – ${fmtDay(m.to)} · 隔周（相位未确认）`);
-        c.querySelector('.facts').append(el('span', 'chip warn', '相位待核实'));
-        out.push(c);
-      }
-    }
-    (week && week.monthly ? week.monthly : []).forEach(mm => {
-      const a = find(data, mm.name);
-      if (!a) return;
-      out.push(card(a, `${fmtDay(a.from || '')} – ${fmtDay(a.until || '')} · 整月`));
+      const a = find(data, o.name) || fallback(o.name, o.type, o.char, null, o.element);
+      let when = o.slot ? `今日在窗口内 · ${o.slot}` : '今日在窗口内';
+      if (o.until) when = `${fmtDay(a.from || '')} – ${fmtDay(o.until)} · 整月`;
+      const c = card(a, when);
+      if (o.unverified) c.querySelector('.facts').append(el('span', 'chip warn', '隔周相位待核实'));
+      return c;
     });
-    return out;
   }
 
   const addDays = (iso, n) => {
@@ -218,21 +207,33 @@
     };
   }
 
-  function renderWeeks(sched, data) {
-    const tb = $('#week-table tbody');
-    const todayWeek = (sched.weeks || []).find(w => w.monday <= data.game_day && data.game_day <= addDays(w.monday, 6));
-    (sched.weeks || []).forEach(w => {
+  /** 逐日表：一行 = 一天，空格 = 当天不开。 */
+  function renderDays(days, data) {
+    const tb = $('#day-table tbody');
+    days.forEach(d => {
       const tr = el('tr');
-      if (todayWeek && w.monday === todayWeek.monday) tr.className = 'today';
-      const c = w.character || [];
-      tr.append(el('td', 'wk', `${fmtDay(w.monday)} 周`));
-      tr.append(el('td', null, `${c[0].char} · ${c[0].name || '—'}`));
-      tr.append(el('td', null, `${c[1].char} · ${c[1].name || '—'}`));
-      const e = w.element || {};
-      tr.append(el('td', null, `${ELEM_ZH[e.element] || e.element} · ${e.name || '—'}`));
-      tr.append(el('td', 'muted', '周三起（场名轮换）'));
-      tr.append(el('td', 'muted', 'Seeing Stars'));
-      tr.append(el('td', 'muted', '隔周（相位未确认）'));
+      if (d.date === data.game_day) tr.className = 'today';
+      tr.append(el('td', 'wk', `${fmtDay(d.date)} 周${d.weekday}`));
+
+      const bucket = { character: [], element: [], gold: [], assist: [], move: [], monthly: [] };
+      d.open.forEach(o => {
+        const k = o.type.indexOf('monthly') === 0 ? 'monthly' : o.type;
+        (bucket[k] || (bucket[k] = [])).push(o);
+      });
+      const put = (key, fmt) => {
+        const td = tr.appendChild(el('td'));
+        if (!bucket[key].length) { td.className = 'muted'; td.textContent = '—'; return; }
+        bucket[key].forEach(o => {
+          const line = el('div', o.unverified ? 'muted' : null, fmt(o));
+          td.append(line);
+        });
+      };
+      put('character', o => `${o.char} · ${o.name || '—'}`);
+      put('element', o => `${ELEM_ZH[o.element] || o.element} · ${o.name || '—'}`);
+      put('gold', () => 'Medici（场名轮换）');
+      put('assist', () => 'Seeing Stars');
+      put('move', () => '隔周场（相位未确认）');
+      put('monthly', o => o.name);
       tb.append(tr);
     });
   }
@@ -355,15 +356,15 @@
 
       /* 排期以「此刻按公式算」为准；只有缺 rotation 时才退回生成时的那份快照。 */
       const today = currentGameDay();
-      const weeks = buildWeeks(data, today, 8) || fallback.weeks || [];
-      const sched = { weeks };
+      /* 逐日：优先按公式现算；缺 rotation 才退回导出的快照。 */
+      const days = buildDays(data, today, 14) || daysFromJson(fallback.daily, today, 14);
       data.game_day = today;
 
       $('#m-ver').textContent = '数据版本 ' + (data.updated_at || '—');
       $('#m-day').textContent = '游戏日 ' + today;
       $('#m-count').textContent = Object.keys(data.arenas || {}).length + ' 条场次';
 
-      const now = openNow(data, sched);
+      const now = openNow(data, days);
       const box = $('#now-cards');
       box.innerHTML = '';
       if (!now.length) {
@@ -373,7 +374,7 @@
       }
       $('#now-hint').textContent = '按游戏日 ' + data.game_day + ' 计算';
 
-      renderWeeks(sched, data);
+      renderDays(days, data);
       renderCatalog(data);
       renderRotation(data);
       renderSources(data);

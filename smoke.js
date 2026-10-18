@@ -36,19 +36,22 @@ const base = process.argv[2] || 'http://127.0.0.1:8899/';
   const check = (cond, msg) => { if (!cond) err.push(msg); };
 
   const cards = $('.card');
-  const rows = $('#week-table tbody tr');
+  const rows = $('#day-table tbody tr');
   const cat = $('#cat-table tbody tr');
   const pending = $('ul.pending li');
 
   console.log('当前开放卡片:', cards.length, cards.length ? [...cards].map(c => c.querySelector('.name').textContent).join(' | ') : '');
-  console.log('排期行:', rows.length);
+  console.log('逐日排期行:', rows.length);
+  [...rows].slice(0, 7).forEach(r => {
+    console.log('  ' + [...r.children].map(td => td.textContent.replace(/\s+/g, ' ') || '—').join(' | '));
+  });
   console.log('目录行:', cat.length);
   console.log('待核实:', pending.length);
   console.log('数据版本:', w.document.querySelector('#m-ver').textContent);
   console.log('游戏日:', w.document.querySelector('#m-day').textContent);
 
   check(cards.length >= 1, '当前开放没有卡片');
-  check(rows.length === 8, '排期行数不是 8');
+  check(rows.length === 14, '逐日排期行数不是 14 (实际 ' + rows.length + ')');
   check(cat.length === 44, '目录行数不是 44 (实际 ' + cat.length + ')');
   check(pending.length >= 3, '待核实条目过少');
   /* ⚠️ 别查 body.textContent: app.js 是当 inline <script> 注入的, 它的源码也算 textContent
