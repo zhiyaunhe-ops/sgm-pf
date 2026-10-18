@@ -54,6 +54,10 @@ const base = process.argv[2] || 'http://127.0.0.1:8899/';
   check(rows.length === 14, '逐日排期行数不是 14 (实际 ' + rows.length + ')');
   check(cat.length >= 44, '目录行数偏少 (实际 ' + cat.length + ')');
   check(pending.length >= 3, '待核实条目过少');
+  /* 图标：header 里必须有一张 logo，且 head 里挂了 favicon */
+  check(!!w.document.querySelector('.brand img'), 'header 没有 logo');
+  check(!!w.document.querySelector('link[rel="icon"]'), 'head 没有 favicon');
+  console.log('图标: header logo + favicon 都在');
   /* 招式场：本周(10/17)必须空、下周末必须是「候选」—— 这正是用户 10-18 纠的点 */
   const move = i => rows[i] ? rows[i].children[5].textContent.trim() : '(缺行)';
   console.log('招式场 本周末:', JSON.stringify(move(0)), '| 下周末:', JSON.stringify(move(7)));

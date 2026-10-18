@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Skullgirls Mobile">
+  <title>Skullgirls Mobile · Prize Fight</title>
+  <defs>
+    <linearGradient id="sk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e04a52"/>
+      <stop offset=".55" stop-color="#c2252f"/>
+      <stop offset="1" stop-color="#8d141d"/>
+    </linearGradient>
+    <radialGradient id="gl" cx=".35" cy=".25" r=".6">
+      <stop offset="0" stop-color="#fff" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- 骷髅心轮廓：两颗心瓣 = 头顶骨，下方收成心尖 -->
+  <path d="M32 58.5C32 58.5 5.2 42.2 5.2 23.9 5.2 14.6 12.4 7.8 20.6 7.8c5 0 9.3 2.4 11.4 6.2 2.1-3.8 6.4-6.2 11.4-6.2 8.2 0 15.4 6.8 15.4 16.1C58.8 42.2 32 58.5 32 58.5Z"
+        fill="url(#sk)" stroke="#5a0c12" stroke-width="2.4" stroke-linejoin="round"/>
+  <!-- 眼窝 -->
+  <ellipse cx="23.2" cy="26.8" rx="6.3" ry="7.6" fill="#1b0609"/>
+  <ellipse cx="40.8" cy="26.8" rx="6.3" ry="7.6" fill="#1b0609"/>
+  <!-- 眼窝高光，避免 16px 下糊成一块 -->
+  <ellipse cx="21.2" cy="24.2" rx="1.7" ry="1.9" fill="#fff" opacity=".85"/>
+  <ellipse cx="38.8" cy="24.2" rx="1.7" ry="1.9" fill="#fff" opacity=".85"/>
+  <!-- 鼻腔 -->
+  <path d="M32 33.6l3.3 5.6h-6.6z" fill="#1b0609"/>
+  <!-- 下颌牙列 -->
+  <g fill="#f6e9ea" opacity=".95">
+    <rect x="24.4" y="42.4" width="3.1" height="6.4" rx="1.5"/>
+    <rect x="30.4" y="43.2" width="3.1" height="6.4" rx="1.5"/>
+    <rect x="36.5" y="42.4" width="3.1" height="6.4" rx="1.5"/>
+  </g>
+  <!-- 高光 -->
+  <ellipse cx="19" cy="14.5" rx="9" ry="7" fill="url(#gl)"/>
+</svg>

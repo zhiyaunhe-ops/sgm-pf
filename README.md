@@ -8,6 +8,14 @@ Skullgirls Mobile 场次（Prize Fight）轮换与出战条件的公开数据集
 存在的原因：`sgmnow`（Score Cutoffs）只给得出「当期名字」，给不出类别、出战条件与轮换依据，
 而且月场、月元素这类信息经常滞后。本站把**规则**和**数据**分开：排期由公式算，条件逐条带来源。
 
+## 图标
+
+`icon.svg` 是主图（64 单位网格），位图由 `tools/mk_icon.py` 用同一套坐标生成：
+`favicon-32.png`（老浏览器）、`apple-touch-icon.png`（180，iOS 只吃 PNG）、`icon-512.png`（分享预览）。
+
+图形是**自绘**的骷髅心（SGM 的视觉母题），不是官方素材，只作站点标识用。
+改形状要 `icon.svg` 与 `tools/mk_icon.py` 里的 `SEGS` 一起改，否则两版不一致。
+
 ## 数据文件
 
 ### `data/arenas.json`

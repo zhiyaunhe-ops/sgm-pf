@@ -5,15 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Skullgirls Mobile · Prize Fight 场次表</title>
 <meta name="description" content="SGM 场次（Prize Fight）轮换表与出战条件：当前开放场次、未来排期、官方限制、数据来源分级。">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#8d141d">
 <link rel="stylesheet" href="style.css">
 <link rel="alternate" type="application/json" href="data/arenas.json">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Skullgirls Mobile · Prize Fight 场次表">
+<meta property="og:description" content="当前开放场次、逐日排期、官方限制与数据来源分级。">
+<meta property="og:image" content="https://zhiyaunhe-ops.github.io/sgm-pf/icon-512.png">
 </head>
 <body>
 
 <header class="top">
   <div class="wrap">
     <div class="brand">
-      <span class="dot"></span>
+      <img class="logo" src="icon.svg" alt="Skullgirls Mobile" width="30" height="30">
       <h1>SGM Prize Fight 场次表</h1>
     </div>
     <p class="sub">当前开放的场次、未来排期、官方限制条件与出战参数。数据以 <code>data/arenas.json</code> 为准，页面只是它的视图。</p>
@@ -79,7 +87,7 @@
         <tbody></tbody>
       </table>
     </div>
-    <p class="note"><b>官方限制</b>只有两条，都是硬规则：<b>元素场</b>限制<b>出战队</b>元素、<b>角色场</b>限制<b>防守队伍</b>角色。「本项目条件」是挂机脚本落盘用的参数（能量 / 分数目标 / 规则串），与官方规则同一口径，只是多了能量与分数这两项脚本自定的值。</p>
+    <p class="note"><b>官方限制</b>只有两条，都是硬规则：<b>元素场</b>要求<b>出战队里含</b>对应元素、<b>角色场</b>要求<b>防守队伍里含</b>对应角色（队伍 3 个位置，<b>含 1 个即可</b>，不是全队同元素/同角色）。「本项目条件」是挂机脚本落盘用的参数（能量 / 分数目标 / 规则串），与官方规则同一口径，只是多了能量与分数这两项脚本自定的值。</p>
   </section>
 
   <section id="rotation">
