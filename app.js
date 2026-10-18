@@ -139,8 +139,16 @@
       if (wd >= 5) open.push({ type: 'element', element: elem, name: elemArena(elem) });
       if (wd === 2 || wd === 3) open.push({ type: 'gold', name: null });
       if (wd === 4 || wd === 5) open.push({ type: 'assist', name: 'SEEING STARS' });
-      /* 招式场：官方只写「隔周、周六–周日」，**哪一周开没确认** ⇒ 不进逐日表。
-       * 排进去等于断言「今天开」，2026-10-18 实测今天没有 ⇒ 宁可空着（在轮换规则里说明）。 */
+      /* 招式场：官方写「隔周、周六–周日」。相位没有长期记录，用 rotation.move_off_weekend
+       * （实测没开的那个周末）当锚点推隔周 —— 标「候选」而不是「开放」：
+       * 用户 2026-10-18 口径「算错了说明下周可能会出现」，所以要留在表里，但必须说清是推算。 */
+      if (wd >= 5 && rot.move_off_weekend) {
+        const sat = ms - (wd - 5) * DAY;
+        const weeks = Math.round((sat - toUTC(rot.move_off_weekend)) / (7 * DAY));
+        if (((weeks % 2) + 2) % 2 === 1) {
+          open.push({ type: 'move', name: 'SHOW ME YOUR MOVES', candidate: true });
+        }
+      }
       monthlies.filter(m => m.from <= iso && iso < m.until)
         .forEach(m => open.push({ type: m.tag, name: m.name, element: m.element, until: m.until }));
       out.push({ date: iso, weekday: wdName[wd], open });
@@ -172,9 +180,10 @@
       }
       const a = find(data, o.name) || fallback(o.name, o.type, o.char, null, o.element);
       let when = o.slot ? `今日在窗口内 · ${o.slot}` : '今日在窗口内';
+      if (o.candidate) when = '隔周候选 · 按上一周末未开推算（非官方确认）';
       if (o.until) when = `${fmtDay(a.from || '')} – ${fmtDay(o.until)} · 整月`;
       const c = card(a, when);
-      if (o.unverified) c.querySelector('.facts').append(el('span', 'chip warn', '隔周相位待核实'));
+      if (o.candidate) c.querySelector('.facts').append(el('span', 'chip warn', '候选：相位按推算，未必开'));
       return c;
     });
   }
@@ -214,7 +223,7 @@
       if (d.date === data.game_day) tr.className = 'today';
       tr.append(el('td', 'wk', `${fmtDay(d.date)} 周${d.weekday}`));
 
-      const bucket = { character: [], element: [], gold: [], assist: [], monthly: [] };
+      const bucket = { character: [], element: [], gold: [], assist: [], move: [], monthly: [] };
       d.open.forEach(o => {
         const k = o.type.indexOf('monthly') === 0 ? 'monthly' : o.type;
         (bucket[k] || (bucket[k] = [])).push(o);
@@ -231,6 +240,7 @@
       put('element', o => `${ELEM_ZH[o.element] || o.element} · ${o.name || '—'}`);
       put('gold', () => 'Medici（场名轮换）');
       put('assist', () => 'Seeing Stars');
+      put('move', o => (o.candidate ? '隔周候选（推算）' : 'Show Me Your Moves'));
       put('monthly', o => o.name);
       tb.append(tr);
     });

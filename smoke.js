@@ -54,6 +54,11 @@ const base = process.argv[2] || 'http://127.0.0.1:8899/';
   check(rows.length === 14, '逐日排期行数不是 14 (实际 ' + rows.length + ')');
   check(cat.length >= 44, '目录行数偏少 (实际 ' + cat.length + ')');
   check(pending.length >= 3, '待核实条目过少');
+  /* 招式场：本周(10/17)必须空、下周末必须是「候选」—— 这正是用户 10-18 纠的点 */
+  const move = i => rows[i] ? rows[i].children[5].textContent.trim() : '(缺行)';
+  console.log('招式场 本周末:', JSON.stringify(move(0)), '| 下周末:', JSON.stringify(move(7)));
+  check(move(0) === '—', '本周末招式场应空着 (实际 ' + move(0) + ')');
+  check(move(7).includes('候选'), '下周末招式场应是候选 (实际 ' + move(7) + ')');
   /* ⚠️ 别查 body.textContent: app.js 是当 inline <script> 注入的, 它的源码也算 textContent
    *    ⇒ 会命中 catch 分支里的那句文案 (假阳性)。只查渲染出来的容器。 */
   check(!w.document.querySelector('#now-cards').textContent.includes('数据读取失败'),

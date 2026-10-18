@@ -747,6 +747,12 @@
      "name": "SEEING STARS"
     },
     {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-17)未开，按隔周推算"
+    },
+    {
      "type": "monthly_element",
      "name": "FALL OF THE DARK",
      "element": "dark"
@@ -766,6 +772,12 @@
      "type": "element",
      "element": "dark",
      "name": "A SHOT IN THE DARK"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-17)未开，按隔周推算"
     },
     {
      "type": "monthly_element",
@@ -1021,6 +1033,12 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-17)未开，按隔周推算"
     }
    ]
   },
@@ -1032,6 +1050,12 @@
      "type": "element",
      "element": "fire",
      "name": "RING OF FIRE"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-17)未开，按隔周推算"
     }
    ]
   },
@@ -1217,6 +1241,12 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-17)未开，按隔周推算"
     }
    ]
   },
@@ -1228,6 +1258,12 @@
      "type": "element",
      "element": "light",
      "name": "A SHINING EXAMPLE"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-17)未开，按隔周推算"
     }
    ]
   },
@@ -1413,6 +1449,12 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-17)未开，按隔周推算"
     }
    ]
   },
@@ -1424,8 +1466,18 @@
      "type": "element",
      "element": "water",
      "name": "HIGH TIDE"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-17)未开，按隔周推算"
     }
    ]
   }
- ]
+ ],
+ "move_phase": {
+  "known_off_weekend": "2026-10-17",
+  "note": "招式场隔周开；相位按「该周末未开」推算（C 级，非官方）"
+ }
 }

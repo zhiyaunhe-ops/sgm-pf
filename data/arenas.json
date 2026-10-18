@@ -54,6 +54,8 @@
   ],
   "character_window": "周一–周三 / 周四–周六（周日空档，各 3 天）",
   "element_window": "周六–周日（2 天）",
+  "move_window": "周六–周日，隔周开（相位按本周末未开推算，C 级）",
+  "move_off_weekend": "2026-10-17",
   "checked_against": [
    {
     "day": "2026-09-17",
@@ -1071,9 +1073,9 @@
    "from": "2026-09-01",
    "until": "2026-10-01",
    "official": {
-    "restriction": "防守队伍需为对应角色（角色待确认）",
-    "applies_to": "defense",
-    "note": "官方规则：角色场限制防守队伍的角色"
+    "restriction": "无",
+    "applies_to": null,
+    "note": "月场不设出战限制（用户口径 2026-10-18）"
    },
    "src": [
     "用户2026-09-16 确认 = 角色月场; 202609角色月场场次(rule=null, tgt=None, 实测 188,331,229) 已实证。10-01 起 sgmnow 的 Monthly PF 换成 Costume Party, 本条过期",
@@ -1084,7 +1086,7 @@
     "energy": 4,
     "score_target": null,
     "rule": null,
-    "note": "class 只约束防守队伍（官方规则）",
+    "note": null,
     "rule_reason": "该类场无出战限制"
    }
   },
@@ -1165,9 +1167,9 @@
    "from": "2026-10-01",
    "until": "2026-11-01",
    "official": {
-    "restriction": "防守队伍需为对应角色（角色待确认）",
-    "applies_to": "defense",
-    "note": "官方规则：角色场限制防守队伍的角色"
+    "restriction": "无",
+    "applies_to": null,
+    "note": "月场不设出战限制（用户口径 2026-10-18）"
    },
    "src": [
     "2026-10-18 用户口径: 10 月两个月场 = FALL OF THE DARK + COSTUME PARTY; 角色场按官方规则限制**防守队伍**的角色。⚠️ 具体是哪个角色官方公告未点名, 待游戏内防守队要求确认 ⇒ char=null, 不猜 (填错比留空更糟: 会锁死选人)",
@@ -1178,7 +1180,7 @@
     "energy": 4,
     "score_target": null,
     "rule": null,
-    "note": "class 只约束防守队伍（官方规则）",
+    "note": null,
     "rule_reason": "该类场无出战限制"
    }
   },
