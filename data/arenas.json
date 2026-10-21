@@ -1,7 +1,7 @@
 {
  "schema": 2,
- "updated_at": "2026-10-20",
- "game_day": "2026-10-19",
+ "updated_at": "2026-10-21",
+ "game_day": "2026-10-20",
  "game_version": "8.11",
  "monthly_slots": 2,
  "source": "https://zhiyaunhe-ops.github.io/sgm-pf/data/arenas.json",
