@@ -1,5 +1,5 @@
 {
- "generated_for": "2026-10-21",
+ "generated_for": "2026-10-22",
  "weeks": [
   {
    "monday": "2026-10-19",
@@ -29,7 +29,7 @@
     "name": "MEDICI SHAKEDOWN",
     "note": "场名/变体取 sgmnow 实测；隔周换名顺序仍未确认",
     "variant": "Hemofilia",
-    "name_basis": "sgmnow 2026-10-21「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
+    "name_basis": "sgmnow 2026-10-22「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
    },
    "assist": {
     "from": "2026-10-23",
@@ -500,7 +500,7 @@
      "type": "gold",
      "name": "MEDICI SHAKEDOWN",
      "variant": "Hemofilia",
-     "basis": "sgmnow 2026-10-21「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
+     "basis": "sgmnow 2026-10-22「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
     },
     {
      "type": "monthly_element",
@@ -527,7 +527,7 @@
      "type": "gold",
      "name": "MEDICI SHAKEDOWN",
      "variant": "Hemofilia",
-     "basis": "sgmnow 2026-10-21「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
+     "basis": "sgmnow 2026-10-22「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
     },
     {
      "type": "monthly_element",
