@@ -56,6 +56,25 @@
   "element_window": "周六–周日（2 天）",
   "move_window": "周六–周日，隔周开（相位按本周末未开推算，C 级）",
   "move_off_weekend": "2026-10-24",
+  "gold_window": "周三–周四（2 天）",
+  "gold_windows": [
+   {
+    "from": "2026-10-21",
+    "to": "2026-10-22",
+    "arena": "MEDICI SHAKEDOWN",
+    "variant": "Hemofilia",
+    "basis": "sgmnow 2026-10-21「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）",
+    "observed": "2026-10-21"
+   }
+  ],
+  "gold_current": {
+   "from": "2026-10-21",
+   "to": "2026-10-22",
+   "arena": "MEDICI SHAKEDOWN",
+   "variant": "Hemofilia",
+   "basis": "sgmnow 2026-10-21「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）",
+   "observed": "2026-10-21"
+  },
   "checked_against": [
    {
     "day": "2026-09-17",
@@ -110,7 +129,7 @@
   },
   {
    "item": "Medici 场的名字轮换顺序",
-   "why": "已知每周三开、5 个场名 + Shakedown 两变体，顺序未确认",
+   "why": "5 个场名出自 SGM Wiki（B 级）；开窗周已由 sgmnow 实测确认（周三–周四，Current 旗标 1，C 级）。每个窗口的场名/变体只记实测（rotation.gold_windows），「5 个名字怎么轮」仍无来源，勿按变体两周交替外推",
    "level": "B"
   }
  ],

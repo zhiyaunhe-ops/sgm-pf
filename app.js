@@ -131,6 +131,17 @@
   const toISO = ms => new Date(ms).toISOString().slice(0, 10);
 
   /**
+   * 金币场实测窗口查表。
+   *
+   * rotation.gold_windows 只装**实测过**的窗口（由 sgmnow 当日快照产出），
+   * 没测到的周查不到 ⇒ 场名留空，宁可空着也不拿别周的场名顶替。
+   */
+  function goldWindow(data, iso) {
+    const ws = (data.rotation && data.rotation.gold_windows) || [];
+    return ws.find(w => w.from <= iso && iso <= w.to) || null;
+  }
+
+  /**
    * 逐日排期（**按天算，不是按周算**）。
    *
    * 一周里每天开放的场次并不一样：角色场周一–周三一个角色、周四–周六换一个，
@@ -168,7 +179,11 @@
       if (wd <= 2) open.push({ type: 'character', char: pair[0], name: charArena(pair[0]), slot: '周一–周三' });
       else if (wd <= 5) open.push({ type: 'character', char: pair[1], name: charArena(pair[1]), slot: '周四–周六' });
       if (wd >= 5) open.push({ type: 'element', element: elem, name: elemArena(elem) });
-      if (wd === 2 || wd === 3) open.push({ type: 'gold', name: null });
+      if (wd === 2 || wd === 3) {
+        const gw = goldWindow(data, iso);
+        open.push({ type: 'gold', name: gw ? gw.arena : null,
+                    variant: gw ? gw.variant : null, basis: gw ? gw.basis : null });
+      }
       if (wd === 4 || wd === 5) open.push({ type: 'assist', name: 'SEEING STARS' });
       /* 招式场：官方写「隔周、周六–周日」。相位没有长期记录，用 rotation.move_off_weekend
        * （实测没开的那个周末）当锚点推隔周 —— 标「候选」而不是「开放」：
@@ -199,14 +214,19 @@
     return today.open.map(o => {
       if (o.type === 'gold') {
         const c = el('div', 'card');
-        c.append(row1('金币场（Medici）', '金币场', 'gold'));
-        c.append(el('div', 'when', '周三起 · 持续 1–2 天'));
+        c.append(row1(o.name ? `金币场 · ${o.name}` : '金币场（Medici）', '金币场', 'gold'));
+        c.append(el('div', 'when', '周三–周四 · 持续 2 天'));
         const f = el('div', 'facts');
         f.append(el('span', 'chip ok', '官方限制：无'));
         f.append(el('span', 'chip', '本项目：4 钉 · 目标 4kw'));
-        f.append(el('span', 'chip warn', '场名轮换顺序未确认'));
+        if (o.name) {
+          f.append(el('span', 'chip ok', '实测变体：' + (o.variant || '—')));
+        } else {
+          f.append(el('span', 'chip warn', '场名轮换顺序未确认'));
+        }
         c.append(f);
-        c.append(el('div', 'src', '依据：SGM Wiki 金币场段（周三开）+ 轮换公式'));
+        c.append(el('div', 'src', o.basis
+          || '依据：SGM Wiki 金币场段（周三开）+ 轮换公式'));
         return c;
       }
       const a = find(data, o.name) || fallback(o.name, o.type, o.char, null, o.element);
@@ -277,7 +297,9 @@
       put('character', o => charBadge(o.char) + `<span class="nmx">${esc(o.name || '—')}</span>`);
       put('element', o => elemIcon(o.element) +
         `<span class="nmx">${esc(o.name || '—')}</span>`);
-      put('gold', () => 'Medici（场名轮换）');
+      put('gold', o => o.name
+        ? `${esc(o.name)}<span class="muted"> · ${esc(o.variant || '变体未知')}</span>`
+        : 'Medici（场名轮换）');
       put('assist', () => 'Seeing Stars');
       put('move', o => (o.candidate ? '隔周候选（推算）' : 'Show Me Your Moves'));
       put('monthly', o => (o.element ? elemIcon(o.element) : '') +

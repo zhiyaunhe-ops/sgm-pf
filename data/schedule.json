@@ -26,8 +26,10 @@
    "gold": {
     "from": "2026-10-21",
     "to": "2026-10-22",
-    "name": null,
-    "note": "Medici 场，名字按周轮换（顺序未确认）"
+    "name": "MEDICI SHAKEDOWN",
+    "note": "场名/变体取 sgmnow 实测；隔周换名顺序仍未确认",
+    "variant": "Hemofilia",
+    "name_basis": "sgmnow 2026-10-21「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
    },
    "assist": {
     "from": "2026-10-23",
@@ -496,7 +498,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": "MEDICI SHAKEDOWN",
+     "variant": "Hemofilia",
+     "basis": "sgmnow 2026-10-21「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
     },
     {
      "type": "monthly_element",
@@ -521,7 +525,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": "MEDICI SHAKEDOWN",
+     "variant": "Hemofilia",
+     "basis": "sgmnow 2026-10-21「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
     },
     {
      "type": "monthly_element",
@@ -664,7 +670,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     },
     {
      "type": "monthly_element",
@@ -689,7 +697,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     },
     {
      "type": "monthly_element",
@@ -814,7 +824,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
@@ -829,7 +841,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
@@ -912,7 +926,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
@@ -927,7 +943,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
@@ -1022,7 +1040,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
@@ -1037,7 +1057,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
@@ -1120,7 +1142,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
@@ -1135,7 +1159,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
@@ -1230,7 +1256,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
@@ -1245,7 +1273,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
@@ -1328,7 +1358,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
@@ -1343,7 +1375,9 @@
     },
     {
      "type": "gold",
-     "name": null
+     "name": null,
+     "variant": null,
+     "basis": null
     }
    ]
   },
