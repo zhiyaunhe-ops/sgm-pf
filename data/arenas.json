@@ -1,7 +1,7 @@
 {
  "schema": 2,
- "updated_at": "2026-10-22",
- "game_day": "2026-10-22",
+ "updated_at": "2026-10-23",
+ "game_day": "2026-10-23",
  "game_version": "8.11",
  "monthly_slots": 2,
  "source": "https://zhiyaunhe-ops.github.io/sgm-pf/data/arenas.json",
@@ -67,14 +67,7 @@
     "observed": "2026-10-22"
    }
   ],
-  "gold_current": {
-   "from": "2026-10-21",
-   "to": "2026-10-22",
-   "arena": "MEDICI SHAKEDOWN",
-   "variant": "Hemofilia",
-   "basis": "sgmnow 2026-10-22「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）",
-   "observed": "2026-10-22"
-  },
+  "gold_current": null,
   "checked_against": [
    {
     "day": "2026-09-17",
