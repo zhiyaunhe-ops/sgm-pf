@@ -1,7 +1,7 @@
 {
  "schema": 2,
  "updated_at": "2026-10-26",
- "game_day": "2026-10-25",
+ "game_day": "2026-10-26",
  "game_version": "8.11",
  "monthly_slots": 2,
  "source": "https://zhiyaunhe-ops.github.io/sgm-pf/data/arenas.json",
@@ -55,7 +55,7 @@
   "character_window": "周一–周三 / 周四–周六（周日空档，各 3 天）",
   "element_window": "周六–周日（2 天）",
   "move_window": "周六–周日，隔周开（相位按本周末未开推算，C 级）",
-  "move_off_weekend": "2026-10-24",
+  "move_off_weekend": "2026-10-31",
   "gold_window": "周三–周四（2 天）",
   "gold_windows": [
    {

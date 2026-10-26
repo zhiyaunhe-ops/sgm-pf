@@ -1,63 +1,6 @@
 {
- "generated_for": "2026-10-25",
+ "generated_for": "2026-10-26",
  "weeks": [
-  {
-   "monday": "2026-10-19",
-   "character": [
-    {
-     "from": "2026-10-19",
-     "to": "2026-10-21",
-     "char": "Beowulf",
-     "name": "RUMBLE PACK"
-    },
-    {
-     "from": "2026-10-22",
-     "to": "2026-10-24",
-     "char": "Peacock",
-     "name": "CUTTING ROOM FLOOR"
-    }
-   ],
-   "element": {
-    "from": "2026-10-24",
-    "to": "2026-10-25",
-    "element": "dark",
-    "name": "A SHOT IN THE DARK"
-   },
-   "gold": {
-    "from": "2026-10-21",
-    "to": "2026-10-22",
-    "name": "MEDICI SHAKEDOWN",
-    "note": "场名/变体取 sgmnow 实测；隔周换名顺序仍未确认",
-    "variant": "Hemofilia",
-    "name_basis": "sgmnow 2026-10-22「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
-   },
-   "assist": {
-    "from": "2026-10-23",
-    "to": "2026-10-24",
-    "name": "SEEING STARS"
-   },
-   "move": {
-    "from": "2026-10-24",
-    "to": "2026-10-25",
-    "name": "SHOW ME YOUR MOVES",
-    "biweekly": true,
-    "note": "隔周开，相位待实机确认"
-   },
-   "monthly": [
-    {
-     "name": "FALL OF THE DARK",
-     "element": "dark",
-     "tag": "monthly_element",
-     "until": "2026-11-01"
-    },
-    {
-     "name": "COSTUME PARTY",
-     "element": null,
-     "tag": "monthly_character",
-     "until": "2026-11-01"
-    }
-   ]
-  },
   {
    "monday": "2026-10-26",
    "character": [
@@ -442,181 +385,64 @@
      "until": "2026-11-01"
     }
    ]
+  },
+  {
+   "monday": "2026-12-14",
+   "character": [
+    {
+     "from": "2026-12-14",
+     "to": "2026-12-16",
+     "char": "Filia",
+     "name": "TWO TO TANGLE"
+    },
+    {
+     "from": "2026-12-17",
+     "to": "2026-12-19",
+     "char": "Parasoul",
+     "name": "DAME OF THRONES"
+    }
+   ],
+   "element": {
+    "from": "2026-12-19",
+    "to": "2026-12-20",
+    "element": "wind",
+    "name": "EYE OF THE STORM"
+   },
+   "gold": {
+    "from": "2026-12-16",
+    "to": "2026-12-17",
+    "name": null,
+    "note": "Medici 场，名字按周轮换（顺序未确认）"
+   },
+   "assist": {
+    "from": "2026-12-18",
+    "to": "2026-12-19",
+    "name": "SEEING STARS"
+   },
+   "move": {
+    "from": "2026-12-19",
+    "to": "2026-12-20",
+    "name": "SHOW ME YOUR MOVES",
+    "biweekly": true,
+    "note": "隔周开，相位待实机确认"
+   },
+   "monthly": [
+    {
+     "name": "FALL OF THE DARK",
+     "element": "dark",
+     "tag": "monthly_element",
+     "until": "2026-11-01"
+    },
+    {
+     "name": "COSTUME PARTY",
+     "element": null,
+     "tag": "monthly_character",
+     "until": "2026-11-01"
+    }
+   ]
   }
  ],
  "daily": [
-  {
-   "date": "2026-10-19",
-   "weekday": "一",
-   "open": [
-    {
-     "type": "character",
-     "char": "Beowulf",
-     "name": "RUMBLE PACK"
-    },
-    {
-     "type": "monthly_element",
-     "name": "FALL OF THE DARK",
-     "element": "dark"
-    },
-    {
-     "type": "monthly_character",
-     "name": "COSTUME PARTY",
-     "element": null
-    }
-   ]
-  },
-  {
-   "date": "2026-10-20",
-   "weekday": "二",
-   "open": [
-    {
-     "type": "character",
-     "char": "Beowulf",
-     "name": "RUMBLE PACK"
-    },
-    {
-     "type": "monthly_element",
-     "name": "FALL OF THE DARK",
-     "element": "dark"
-    },
-    {
-     "type": "monthly_character",
-     "name": "COSTUME PARTY",
-     "element": null
-    }
-   ]
-  },
-  {
-   "date": "2026-10-21",
-   "weekday": "三",
-   "open": [
-    {
-     "type": "character",
-     "char": "Beowulf",
-     "name": "RUMBLE PACK"
-    },
-    {
-     "type": "gold",
-     "name": "MEDICI SHAKEDOWN",
-     "variant": "Hemofilia",
-     "basis": "sgmnow 2026-10-22「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
-    },
-    {
-     "type": "monthly_element",
-     "name": "FALL OF THE DARK",
-     "element": "dark"
-    },
-    {
-     "type": "monthly_character",
-     "name": "COSTUME PARTY",
-     "element": null
-    }
-   ]
-  },
-  {
-   "date": "2026-10-22",
-   "weekday": "四",
-   "open": [
-    {
-     "type": "character",
-     "char": "Peacock",
-     "name": "CUTTING ROOM FLOOR"
-    },
-    {
-     "type": "gold",
-     "name": "MEDICI SHAKEDOWN",
-     "variant": "Hemofilia",
-     "basis": "sgmnow 2026-10-22「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）"
-    },
-    {
-     "type": "monthly_element",
-     "name": "FALL OF THE DARK",
-     "element": "dark"
-    },
-    {
-     "type": "monthly_character",
-     "name": "COSTUME PARTY",
-     "element": null
-    }
-   ]
-  },
-  {
-   "date": "2026-10-23",
-   "weekday": "五",
-   "open": [
-    {
-     "type": "character",
-     "char": "Peacock",
-     "name": "CUTTING ROOM FLOOR"
-    },
-    {
-     "type": "assist",
-     "name": "SEEING STARS"
-    },
-    {
-     "type": "monthly_element",
-     "name": "FALL OF THE DARK",
-     "element": "dark"
-    },
-    {
-     "type": "monthly_character",
-     "name": "COSTUME PARTY",
-     "element": null
-    }
-   ]
-  },
-  {
-   "date": "2026-10-24",
-   "weekday": "六",
-   "open": [
-    {
-     "type": "character",
-     "char": "Peacock",
-     "name": "CUTTING ROOM FLOOR"
-    },
-    {
-     "type": "element",
-     "element": "dark",
-     "name": "A SHOT IN THE DARK"
-    },
-    {
-     "type": "assist",
-     "name": "SEEING STARS"
-    },
-    {
-     "type": "monthly_element",
-     "name": "FALL OF THE DARK",
-     "element": "dark"
-    },
-    {
-     "type": "monthly_character",
-     "name": "COSTUME PARTY",
-     "element": null
-    }
-   ]
-  },
-  {
-   "date": "2026-10-25",
-   "weekday": "日",
-   "open": [
-    {
-     "type": "element",
-     "element": "dark",
-     "name": "A SHOT IN THE DARK"
-    },
-    {
-     "type": "monthly_element",
-     "name": "FALL OF THE DARK",
-     "element": "dark"
-    },
-    {
-     "type": "monthly_character",
-     "name": "COSTUME PARTY",
-     "element": null
-    }
-   ]
-  },
   {
    "date": "2026-10-26",
    "weekday": "一",
@@ -757,12 +583,6 @@
      "name": "SEEING STARS"
     },
     {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "candidate": true,
-     "basis": "本周末(2026-10-24)未开，按隔周推算"
-    },
-    {
      "type": "monthly_element",
      "name": "FALL OF THE DARK",
      "element": "dark"
@@ -782,12 +602,6 @@
      "type": "element",
      "element": "water",
      "name": "HIGH TIDE"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "candidate": true,
-     "basis": "本周末(2026-10-24)未开，按隔周推算"
     }
    ]
   },
@@ -879,6 +693,12 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-31)未开，按隔周推算"
     }
    ]
   },
@@ -890,6 +710,12 @@
      "type": "element",
      "element": "fire",
      "name": "RING OF FIRE"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-31)未开，按隔周推算"
     }
    ]
   },
@@ -981,12 +807,6 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "candidate": true,
-     "basis": "本周末(2026-10-24)未开，按隔周推算"
     }
    ]
   },
@@ -998,12 +818,6 @@
      "type": "element",
      "element": "wind",
      "name": "EYE OF THE STORM"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "candidate": true,
-     "basis": "本周末(2026-10-24)未开，按隔周推算"
     }
    ]
   },
@@ -1095,6 +909,12 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-31)未开，按隔周推算"
     }
    ]
   },
@@ -1106,6 +926,12 @@
      "type": "element",
      "element": "light",
      "name": "A SHINING EXAMPLE"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-31)未开，按隔周推算"
     }
    ]
   },
@@ -1197,12 +1023,6 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "candidate": true,
-     "basis": "本周末(2026-10-24)未开，按隔周推算"
     }
    ]
   },
@@ -1214,12 +1034,6 @@
      "type": "element",
      "element": "dark",
      "name": "A SHOT IN THE DARK"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "candidate": true,
-     "basis": "本周末(2026-10-24)未开，按隔周推算"
     }
    ]
   },
@@ -1311,6 +1125,12 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-31)未开，按隔周推算"
     }
    ]
   },
@@ -1322,6 +1142,12 @@
      "type": "element",
      "element": "water",
      "name": "HIGH TIDE"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-31)未开，按隔周推算"
     }
    ]
   },
@@ -1413,12 +1239,6 @@
     {
      "type": "assist",
      "name": "SEEING STARS"
-    },
-    {
-     "type": "move",
-     "name": "SHOW ME YOUR MOVES",
-     "candidate": true,
-     "basis": "本周末(2026-10-24)未开，按隔周推算"
     }
    ]
   },
@@ -1430,18 +1250,126 @@
      "type": "element",
      "element": "fire",
      "name": "RING OF FIRE"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-14",
+   "weekday": "一",
+   "open": [
+    {
+     "type": "character",
+     "char": "Filia",
+     "name": "TWO TO TANGLE"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-15",
+   "weekday": "二",
+   "open": [
+    {
+     "type": "character",
+     "char": "Filia",
+     "name": "TWO TO TANGLE"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-16",
+   "weekday": "三",
+   "open": [
+    {
+     "type": "character",
+     "char": "Filia",
+     "name": "TWO TO TANGLE"
+    },
+    {
+     "type": "gold",
+     "name": null,
+     "variant": null,
+     "basis": null
+    }
+   ]
+  },
+  {
+   "date": "2026-12-17",
+   "weekday": "四",
+   "open": [
+    {
+     "type": "character",
+     "char": "Parasoul",
+     "name": "DAME OF THRONES"
+    },
+    {
+     "type": "gold",
+     "name": null,
+     "variant": null,
+     "basis": null
+    }
+   ]
+  },
+  {
+   "date": "2026-12-18",
+   "weekday": "五",
+   "open": [
+    {
+     "type": "character",
+     "char": "Parasoul",
+     "name": "DAME OF THRONES"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-19",
+   "weekday": "六",
+   "open": [
+    {
+     "type": "character",
+     "char": "Parasoul",
+     "name": "DAME OF THRONES"
+    },
+    {
+     "type": "element",
+     "element": "wind",
+     "name": "EYE OF THE STORM"
+    },
+    {
+     "type": "assist",
+     "name": "SEEING STARS"
     },
     {
      "type": "move",
      "name": "SHOW ME YOUR MOVES",
      "candidate": true,
-     "basis": "本周末(2026-10-24)未开，按隔周推算"
+     "basis": "本周末(2026-10-31)未开，按隔周推算"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-20",
+   "weekday": "日",
+   "open": [
+    {
+     "type": "element",
+     "element": "wind",
+     "name": "EYE OF THE STORM"
+    },
+    {
+     "type": "move",
+     "name": "SHOW ME YOUR MOVES",
+     "candidate": true,
+     "basis": "本周末(2026-10-31)未开，按隔周推算"
     }
    ]
   }
  ],
  "move_phase": {
-  "known_off_weekend": "2026-10-24",
+  "known_off_weekend": "2026-10-31",
   "note": "招式场隔周开；相位按「该周末未开」推算（C 级，非官方）"
  }
 }
