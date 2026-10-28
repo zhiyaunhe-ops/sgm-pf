@@ -1,7 +1,7 @@
 {
  "schema": 2,
- "updated_at": "2026-10-27",
- "game_day": "2026-10-27",
+ "updated_at": "2026-10-28",
+ "game_day": "2026-10-28",
  "game_version": "8.11",
  "monthly_slots": 2,
  "source": "https://zhiyaunhe-ops.github.io/sgm-pf/data/arenas.json",
@@ -65,9 +65,24 @@
     "variant": "Hemofilia",
     "basis": "sgmnow 2026-10-22「Current Medici PF: Shakedown - Hemofilia」（C 级·本机实测）",
     "observed": "2026-10-22"
+   },
+   {
+    "from": "2026-10-28",
+    "to": "2026-10-29",
+    "arena": "MEDICI SHAKEDOWN",
+    "variant": "Jinx",
+    "basis": "sgmnow 2026-10-28「Current Medici PF: Shakedown - Jinx」（C 级·本机实测）",
+    "observed": "2026-10-28"
    }
   ],
-  "gold_current": null,
+  "gold_current": {
+   "from": "2026-10-28",
+   "to": "2026-10-29",
+   "arena": "MEDICI SHAKEDOWN",
+   "variant": "Jinx",
+   "basis": "sgmnow 2026-10-28「Current Medici PF: Shakedown - Jinx」（C 级·本机实测）",
+   "observed": "2026-10-28"
+  },
   "checked_against": [
    {
     "day": "2026-09-17",

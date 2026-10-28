@@ -1,5 +1,5 @@
 {
- "generated_for": "2026-10-27",
+ "generated_for": "2026-10-28",
  "weeks": [
   {
    "monday": "2026-10-26",
@@ -26,8 +26,10 @@
    "gold": {
     "from": "2026-10-28",
     "to": "2026-10-29",
-    "name": null,
-    "note": "Medici 场，名字按周轮换（顺序未确认）"
+    "name": "MEDICI SHAKEDOWN",
+    "note": "场名/变体取 sgmnow 实测；隔周换名顺序仍未确认",
+    "variant": "Jinx",
+    "name_basis": "sgmnow 2026-10-28「Current Medici PF: Shakedown - Jinx」（C 级·本机实测）"
    },
    "assist": {
     "from": "2026-10-30",
@@ -496,9 +498,9 @@
     },
     {
      "type": "gold",
-     "name": null,
-     "variant": null,
-     "basis": null
+     "name": "MEDICI SHAKEDOWN",
+     "variant": "Jinx",
+     "basis": "sgmnow 2026-10-28「Current Medici PF: Shakedown - Jinx」（C 级·本机实测）"
     },
     {
      "type": "monthly_element",
@@ -523,9 +525,9 @@
     },
     {
      "type": "gold",
-     "name": null,
-     "variant": null,
-     "basis": null
+     "name": "MEDICI SHAKEDOWN",
+     "variant": "Jinx",
+     "basis": "sgmnow 2026-10-28「Current Medici PF: Shakedown - Jinx」（C 级·本机实测）"
     },
     {
      "type": "monthly_element",
