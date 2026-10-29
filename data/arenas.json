@@ -1,7 +1,7 @@
 {
  "schema": 2,
- "updated_at": "2026-10-28",
- "game_day": "2026-10-28",
+ "updated_at": "2026-10-29",
+ "game_day": "2026-10-29",
  "game_version": "8.11",
  "monthly_slots": 2,
  "source": "https://zhiyaunhe-ops.github.io/sgm-pf/data/arenas.json",
@@ -71,8 +71,8 @@
     "to": "2026-10-29",
     "arena": "MEDICI SHAKEDOWN",
     "variant": "Jinx",
-    "basis": "sgmnow 2026-10-28「Current Medici PF: Shakedown - Jinx」（C 级·本机实测）",
-    "observed": "2026-10-28"
+    "basis": "sgmnow 2026-10-29「Current Medici PF: Shakedown - Jinx」（C 级·本机实测）",
+    "observed": "2026-10-29"
    }
   ],
   "gold_current": {
@@ -80,8 +80,8 @@
    "to": "2026-10-29",
    "arena": "MEDICI SHAKEDOWN",
    "variant": "Jinx",
-   "basis": "sgmnow 2026-10-28「Current Medici PF: Shakedown - Jinx」（C 级·本机实测）",
-   "observed": "2026-10-28"
+   "basis": "sgmnow 2026-10-29「Current Medici PF: Shakedown - Jinx」（C 级·本机实测）",
+   "observed": "2026-10-29"
   },
   "checked_against": [
    {
