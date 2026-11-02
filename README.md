@@ -82,6 +82,27 @@ Skullgirls Mobile 场次（Prize Fight）轮换与出战条件的公开数据集
 ⚠️ 页面**不直接用它**：页面按 `rotation` 里的锚点与顺序在当前时刻重算（否则过八周整表就过期了）。
 这份文件仍然发布，给 APK / 其他消费者用；只在 `rotation` 缺失时页面才回退到它。
 
+### `data/notices.json`
+
+版本公告里**与场次口径有关**的条目。手工维护，`tools/pf_site_export.py` 不写它，所以不会被每日导出覆盖。
+
+| 字段 | 含义 |
+|---|---|
+| `sources` | 公告出处（版本号 / 发布日 / 抓取日 / `level` / `caveat`） |
+| `notices[].title` | 本条主题 |
+| `notices[].quote` | **官方原文**（事实，A 级） |
+| `notices[].impact` | **本项目判断**（不是事实，按 `level` 分级） |
+| `notices[].arenas` | 关联的场次键（对照 `arenas.json`），可为空 |
+| `notices[].level` | 判断的等级：`A/U/B/C/D` |
+| `notices[].pending` | `true` = 待核实，页面上带「待核实」标记 |
+
+两条硬规矩：
+
+1. **原文与判断必须分列**，页面也分区渲染。判断永远不写进 `arenas.json` —— 公告只是线索，
+   能进目录的条目必须两端档期都确凿。
+2. **拿不到官方原文就写清 `caveat`**。当前 8.12.0 只有官方公告的中文版本
+   （`skullgirls.com/release-notes` 抓取返回 Access Denied），英文措辞未复核。
+
 ## 轮换规则
 
 ```

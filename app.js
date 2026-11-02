@@ -421,6 +421,64 @@
     if (r.checked_disclaimer) box.append(el('p', 'note', r.checked_disclaimer));
   }
 
+  /* ---------------- 版本公告 ----------------
+   * 数据来自 data/notices.json（手工维护，导出脚本不写它）。
+   * 原文与判断分列：「原文」来自官方公告（A 级），「本项目判断」按等级标注，
+   * pending 的显式标「待核实」。这一节只做展示、不参与排期计算 ——
+   * 公告是线索；能进 arenas.json 的必须是两端档期都确凿的条目。 */
+  function renderNotices(nv) {
+    const box = $('#notices-list');
+    if (!box) return;
+    box.innerHTML = '';
+    const srcs = {};
+    (nv.sources || []).forEach(s => { srcs[s.id] = s; });
+    const list = nv.notices || [];
+
+    const hint = $('#notices-hint');
+    if (hint) {
+      const vers = [];
+      list.forEach(n => { const s = srcs[n.source]; if (s && vers.indexOf(s.version) < 0) vers.push(s.version); });
+      hint.textContent = (vers.length ? 'v' + vers.join(' / v') : '公告') + ' · ' + list.length + ' 条';
+    }
+    if (!list.length) { box.append(el('p', 'empty', '暂无公告条目。')); return; }
+
+    list.forEach(n => {
+      const card = el('div', 'rule-card notice');
+      const h = el('h3', null, n.title);
+      h.append(document.createTextNode(' '));
+      h.append(badge(n.level || 'D'));
+      if (n.pending) {
+        const p = el('span', 'chip warn', '待核实');
+        p.style.marginLeft = '6px';
+        h.append(p);
+      }
+      card.append(h);
+      card.append(el('blockquote', 'quote', n.quote));
+      card.append(el('p', 'note', '本项目判断：' + (n.impact || '—')));
+      if (n.arenas && n.arenas.length) {
+        card.append(el('p', 'muted', '关联场次：' + n.arenas.join(' / ')));
+      }
+      const s = srcs[n.source];
+      if (s) {
+        card.append(el('p', 'muted', '出处：' + s.channel + ' v' + s.version +
+          '（发布 ' + s.released_utc + '，抓取 ' + s.fetched + '）' + (s.caveat ? ' · ' + s.caveat : '')));
+      }
+      box.append(card);
+    });
+  }
+
+  /* 公告是附加内容：读不到就整节隐藏，不能让主表跟着失败。 */
+  async function loadNotices() {
+    try {
+      const res = await fetch('data/notices.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      renderNotices(await res.json());
+    } catch (e) {
+      const sec = $('#notices');
+      if (sec) sec.style.display = 'none';
+    }
+  }
+
   function renderSources(data) {
     const box = $('#levels');
     const names = { A: 'A · 官方', U: 'U · 用户口径', B: 'B · 社区 wiki', C: 'C · 本机（仅参考）', D: 'D · 推定' };
@@ -480,6 +538,7 @@
       renderCatalog(data);
       renderRotation(data);
       renderSources(data);
+      loadNotices();
     } catch (e) {
       $('#now-cards').innerHTML = '';
       const d = el('div', 'empty', '数据读取失败：' + e.message +

@@ -123,6 +123,12 @@
     <div id="checked"></div>
   </section>
 
+  <section id="notices">
+    <h2>版本公告 <span class="hint" id="notices-hint"></span></h2>
+    <p class="note">只收录与场次口径有关的条目。<b>官方原文是事实，「本项目判断」不是</b> —— 判断带等级、拿不准的标「待核实」，并且不写进 <code>arenas.json</code>。数据见 <code>data/notices.json</code>（手工维护，不被导出脚本覆盖）。</p>
+    <div class="notice-list" id="notices-list"><p class="loading">读取中…</p></div>
+  </section>
+
   <section id="sources">
     <h2>数据分级与来源</h2>
     <div class="levels" id="levels"></div>
@@ -135,7 +141,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    <p>数据由 <code>tools/pf_site_export.py</code> 从场次表与轮换规则生成，页面不含手工维护的排期。发现问题请直接改 <code>arenas.json</code> 或提 issue。</p>
+    <p>数据由 <code>tools/pf_site_export.py</code> 从场次表与轮换规则生成，页面不含手工维护的排期。版本公告（<code>data/notices.json</code>）是唯一手工维护的数据文件。发现问题请直接改 <code>arenas.json</code> 或提 issue。</p>
     <p class="tiny">Skullgirls Mobile 及相关名称归 Autumn Games / Hidden Variable 所有。本站为非官方资料站。</p>
   </div>
 </footer>

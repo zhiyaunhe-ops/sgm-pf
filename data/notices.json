@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "updated_at": "2026-11-02",
+  "about": "版本公告里与 Prize Fight / 场次口径相关的事实。只放能追溯原文的条目；判断与原文分列，等级口径见 README「来源分级」。本文件不由 tools/pf_site_export.py 生成，可手工维护。",
+  "sources": [
+    {
+      "id": "sgm-8.12.0",
+      "version": "8.12.0",
+      "released_utc": "2026-10-28",
+      "publisher": "Autumn Games / Hidden Variable",
+      "channel": "官方更新公告（中文版）",
+      "url": "https://m.youxiguancha.com/game/95936.html",
+      "fetched": "2026-11-02",
+      "level": "A",
+      "caveat": "英文原文站 skullgirls.com/release-notes 抓取返回 Access Denied，本条依据的是官方公告的中文版本（第三方站转载，2026-10-30）。英文原文取得后应复核措辞。"
+    }
+  ],
+  "notices": [
+    {
+      "id": "pf-matchmaking",
+      "source": "sgm-8.12.0",
+      "title": "奖品对战匹配系统改动",
+      "quote": "奖品对战更多样化 —— 更新后的匹配系统将带来更多样化的对手。",
+      "impact": "选对手页三张卡的构成（战力/倍率组合）分布会变，脚本按「倍率最大」选卡这一策略的依据值需要重测；倍率带（火焰内数字带 NCC）的阈值不受影响，但 1.5x 出现的频率与所在卡位可能变化。",
+      "arenas": [],
+      "level": "A",
+      "pending": false
+    },
+    {
+      "id": "nov-monthly-two",
+      "source": "sgm-8.12.0",
+      "title": "11 月两个月场接连举行",
+      "quote": "11月的「连招盛宴」和「暗黑丰收」活动将接连举行。",
+      "impact": "「连招盛宴」与 hub 上的 COMBOCOPIA（角色月场，11-01 起）语义与时间均吻合，属推定；「暗黑丰收」应是 11 月另一场月场（姓名推定 DARK HARVEST），目录里尚无此条目，档期/元素/出战规则全未知。目录只到 COMBOCOPIA 一场月末，说明 11 月第二场月场还没进表 —— 缺口已知、数据未知，不得外推窗口。",
+      "arenas": ["COMBOCOPIA"],
+      "level": "D",
+      "pending": true
+    },
+    {
+      "id": "monthly-milestone-adjust",
+      "source": "sgm-8.12.0",
+      "title": "月场里程碑目标调整（两活动奖励相同）",
+      "quote": "里程碑目标已调整，且两项活动提供的奖励相同。",
+      "impact": "这条解释了 2026-11-02 的实测：COMBOCOPIA 累计 119,632,149 分时，结算页 NEXT REWARD 已显示「-」，奖励页最高档只有 1,500 分且全部 CLAIMED。结论：月场的 score_target 不该再按旧的 50,000,000 口径写；月度里程碑不再构成跑分瓶颈，实际上限只剩排名奖励。",
+      "arenas": ["COMBOCOPIA"],
+      "level": "A",
+      "pending": false
+    },
+    {
+      "id": "monthly-gold-diamond",
+      "source": "sgm-8.12.0",
+      "title": "新增每月黄金与钻石活动",
+      "quote": "此外 —— 新增每月黄金和钻石活动，并修复了部分漏洞。",
+      "impact": "金币场（Medici）目录目前的「5 个场名 + Shakedown 两变体轮换」描述可能已不完整：新增的月度金/钻石场与现有周三金币场是否同一入口、是否轮换同一组场名，均未核实。在核实前不要把月度金/钻石场并入金币场轮换序列。",
+      "arenas": ["GOLDRUSH"],
+      "level": "A",
+      "pending": true
+    },
+    {
+      "id": "nov-backstage-fighters",
+      "source": "sgm-8.12.0",
+      "title": "新变体与后台通行证（与场次无关，仅作版本背景）",
+      "quote": "让“钻石炫目小妖伞”及其能延长连招的“气泡猛击”引爆全场！或释放“金心失恋情人”的强化攻击，持续施压。这两款新变体均可在“头牌遗物”中获取。“阴郁前景”后台通行证 —— 新一季奖励将于11月1日开启。",
+      "impact": "不影响场次表与出战规则。记录在此是为了标明 8.12.0 的版本边界：新变体的属性（元素/角色 class）会影响元素场与角色场的可选池，但只在确认其属性后才需要更新目录里的角色/元素清单。",
+      "arenas": [],
+      "level": "A",
+      "pending": false
+    }
+  ]
+}
