@@ -1,7 +1,7 @@
 {
  "schema": 2,
- "updated_at": "2026-11-01",
- "game_day": "2026-10-31",
+ "updated_at": "2026-11-02",
+ "game_day": "2026-11-01",
  "game_version": "8.11",
  "monthly_slots": 2,
  "source": "https://zhiyaunhe-ops.github.io/sgm-pf/data/arenas.json",
@@ -1193,6 +1193,38 @@
    },
    "src": [
     "2026-10-18 用户口径: 10 月两个月场 = FALL OF THE DARK + COSTUME PARTY; 角色场按官方规则限制**防守队伍**的角色。⚠️ 具体是哪个角色官方公告未点名, 待游戏内防守队要求确认 ⇒ char=null, 不猜 (填错比留空更糟: 会锁死选人)",
+    "tools/data/monthly_manual.json"
+   ],
+   "conf": "A",
+   "project": {
+    "energy": 4,
+    "score_target": null,
+    "rule": null,
+    "note": null,
+    "rule_reason": "该类场无出战限制"
+   }
+  },
+  "COMBOCOPIA": {
+   "name": "COMBOCOPIA",
+   "tag": "monthly_character",
+   "element": null,
+   "char": null,
+   "monthly": true,
+   "kind": "月场·角色",
+   "window": {
+    "type": "monthly",
+    "days": 30,
+    "desc": "每月 1 日开，整月"
+   },
+   "from": "2026-11-01",
+   "until": "2026-11-18",
+   "official": {
+    "restriction": "无",
+    "applies_to": null,
+    "note": "角色月场不设出战限制（用户口径 2026-10-18）"
+   },
+   "src": [
+    "用户 2026-11-02 口径「今天一个角色月场 + 一个水元素周」+ C 游戏内实测(2026-11-02 14:00 hub 卡面 COMBOCOPIA, 倒计时 14D12H, 与同屏 HIGH TIDE 12h 并存) ⇒ 角色月场, rule=null (角色月场不设出战限制, 用户 2026-10-18 口径)。⚠️ 档期无官方公告, 由倒计时反推: 11-02 14:00 + 14d12h ≈ 11-17 02:00 ⇒ valid_until 取 11-18 (不含); 11-02 实测: 确认防守队后 PLAY 可直接进选对手页, 与 rule=null 一致",
     "tools/data/monthly_manual.json"
    ],
    "conf": "A",
